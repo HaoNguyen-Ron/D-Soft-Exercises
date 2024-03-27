@@ -1,0 +1,52 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  padding: 0px;
+  border: none;
+  background-color: $btn-primary;
+  
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.container {
+  min-width: 144rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
