@@ -22,6 +22,10 @@ img {
 
 body {
   font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  max-width: 131.3rem;
+  background-color: $color-primary;
 }
 
 a {
@@ -32,21 +36,21 @@ a {
 
 p {
   margin: 0;
+  font-size: 1.6rem;
 }
 
 button {
   cursor: pointer;
   padding: 0px;
   border: none;
-  background-color: $btn-primary;
-  
+  background-color: transparent;
+
   &:hover {
     opacity: 0.5;
   }
 }
 
 .container {
-  min-width: 144rem;
+  max-width: calc(131.3rem - 50rem);
   margin: 0 auto;
-  overflow: hidden;
 }

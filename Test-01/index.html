@@ -18,50 +18,127 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/@icon/themify-icons@1.0.1-alpha.3/themify-icons.min.css
+"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="header_container">
-          <div class="header-logo">
-            <img
-              src="https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/deliveries/2468204/original/creative-logo-design_ws_1403762378/design-a-professional-logo-2-concepts-24hrs.jpg"
-              alt="Skillfy main logo"
-            />
-          </div>
+    <header>
+      <div class="container d-flex">
+        <div class="header__logo">
+          <img
+            src="./asset/image/logo.png"
+            alt="Skillfy main logo"
+            class="img-fluid"
+          />
+        </div>
 
-          <nav class="header-nav">
-            <ul class="nav_list">
-              <li class="nav_item">Home</li>
-              <li class="nav_item">Pages</li>
-              <li class="nav_item">Courses</li>
-              <li class="nav_item">Features</li>
-              <li class="nav_item">Blog</li>
-              <li class="nav_item">Shop</li>
-            </ul>
-          </nav>
+        <nav
+          class="header__nav d-flex justify-content-center align-items-center"
+        >
+          <ul class="nav__list d-flex">
+            <li class="nav__item d-flex align-items-center">
+              Home
+              <i class="ti ti-angle-down ms-1"></i>
+            </li>
+            <li class="nav__item d-flex align-items-center">
+              Pages
+              <i class="ti ti-angle-down ms-1"></i>
+            </li>
+            <li class="nav__item d-flex align-items-center">
+              Courses
+              <i class="ti ti-angle-down ms-1"></i>
+            </li>
+            <li class="nav__item d-flex align-items-center">
+              Features
+              <i class="ti ti-angle-down ms-1"></i>
+            </li>
+            <li class="nav__item d-flex align-items-center">
+              Blog
+              <i class="ti ti-angle-down ms-1"></i>
+            </li>
+            <li class="nav__item d-flex align-items-center">
+              Shop
+              <i class="ti ti-angle-down ms-1"></i>
+            </li>
+          </ul>
+        </nav>
 
-          <div class="header-search">
+        <div
+          class="header__action d-flex justify-content-center align-items-center"
+        >
+          <div class="header__action-search">
             <button>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path
-                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                />
-              </svg>
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
 
-          <div class="header-register">
-            <button class="btn-primary">
-                Register
+          <div class="header__action-cart">
+            <button>
+              <i class="ti ti-shopping-cart"></i>
+            </button>
+          </div>
+
+          <div class="header__action-register">
+            <button class="btn-primary">Register</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="banner__container d-flex justify-content-between align-items-start"
+      >
+        <div class="banner__content">
+          <div class="banner__content-title">
+            Turn your ambition into a success story
+          </div>
+
+          <div class="banner__content-desc">
+            Choose from over 100.000 online video courses with new addtions
+            published every month.
+          </div>
+
+          <div class="banner__content-input d-flex">
+            <input type="text" placeholder="Search your favourite course" />
+
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
         </div>
-      </header>
-    </div>
+
+        <div class="banner__image">
+          <div class="banner__image-border">
+            <img src="./asset/image/image1.jpg" />
+          </div>
+        </div>
+      </section>
+
+      <section class="course__container">
+        <div class="container">
+          <div class="course__title">
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
