@@ -1,5 +1,27 @@
-.course__container {
-    background-color: $color-secondary;
+.course__wrapper {
+  background-color: $color-secondary;
 
-    
+  .course__selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5rem;
+
+    &-title {
+      font-weight: 600;
+    }
+
+    &-filter {
+      button {
+        &:first-child {
+          margin-right: 1.5rem;
+        }
+
+        &:last-child {
+          @include pageBtn(1.2rem, 2rem);
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
 }

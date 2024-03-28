@@ -1,7 +1,6 @@
-.banner__container {
-    margin-top: 7rem;
-    max-width: calc(131.3rem - 50rem);
-    margin: 0 auto;
+.banner__wrapper {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
 
   .banner__content {
     margin-top: 1rem;
@@ -16,7 +15,7 @@
 
     &-desc {
       font-size: 1.6rem;
-      color: #5f5881;
+      color: $p-primary;
       line-height: 2.3rem;
       margin-bottom: 3.2rem;
     }
@@ -68,5 +67,3 @@
     }
   }
 }
-
-
