@@ -1,11 +1,13 @@
 .course__wrapper {
   background-color: $color-secondary;
+  padding-bottom: 5rem;
 
   .course__selection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 5rem;
+    margin-bottom: 4rem;
 
     &-title {
       font-weight: 600;
@@ -20,6 +22,189 @@
         &:last-child {
           @include pageBtn(1.2rem, 2rem);
           border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .course__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 2rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .course {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      align-items: center;
+      background-color: white;
+      padding: 1rem 1rem;
+      border-radius: 0.5rem;
+      min-width: 25rem;
+
+      .course__image {
+        img {
+          border-radius: 0.5rem;
+          width: auto;
+          height: 20rem;
+          object-fit: cover;
+        }
+      }
+
+      .course__dashboard {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f7f6fc;
+        padding: 1.2rem 0;
+
+        &-rate {
+          i {
+            color: #f5c467;
+          }
+        }
+
+        &-view {
+          i {
+            color: $color-forth;
+          }
+        }
+
+        &-lesson {
+          i {
+            color: #75b291;
+          }
+        }
+      }
+
+      .course__info {
+        &-title {
+          font-size: 2rem;
+          font-weight: 600;
+          margin-bottom: 2rem;
+        }
+
+        &-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &-avatar {
+            display: flex;
+            align-items: center;
+            flex: 1 0 4rem;
+            color: $p-primary;
+            font-size: 1rem;
+
+            img {
+              border-radius: 50%;
+              width: 5rem;
+              height: 5rem;
+              margin-right: 1rem;
+            }
+          }
+
+          &-price {
+            display: flex;
+            gap: 1rem;
+
+            .price-sale {
+              font-weight: 600;
+              color: $color-forth;
+            }
+
+            .price-original {
+              color: $p-primary;
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .course__slider {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+      display: block;
+    }
+
+    &-btn {
+      width: 5rem;
+      height: 5rem;
+      background-color: white;
+      border-radius: 0.5rem;
+
+      &[disabled] {
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+
+        &:hover {
+          border: 1px solid #999999;
+          background-color: #cccccc;
+          i {
+            color: #666666;
+          }
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+        background-color: #dddd;
+        i {
+          color: $color-forth;
+        }
+      }
+    }
+
+    &-track {
+      height: 0.5rem;
+      width: 100%;
+      background-color: transparent;
+      position: relative;
+      border-radius: 0.4rem;
+
+      &:hover {
+        height: 0.7rem;
+      }
+
+      .course__slider-thumb {
+        position: absolute;
+        height: 100%;
+        width: 33%;
+        background-color: $color-forth;
+        border-radius: inherit;
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+          background-color: #dddd;
+          height: 0.8rem;
+          top: -0.2rem;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -1rem;
+          bottom: -1rem;
         }
       }
     }

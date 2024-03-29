@@ -1,0 +1,121 @@
+.category__wrapper {
+  margin-bottom: 5rem;
+  .category__selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5rem;
+    margin-bottom: 4rem;
+
+    &-title {
+      font-weight: 600;
+    }
+
+    &-filter {
+      button {
+        @include pageBtn(1.2rem, 2rem);
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  .category__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    .category {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 2em 1.5rem;
+      border-radius: 0.3rem;
+
+      &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.3rem;
+      }
+
+      &-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+
+      &-info {
+        color: #9195a9;
+        line-height: 2rem;
+      }
+
+      &:first-child,
+      &:nth-child(8) {
+        background-color: $color-secondary;
+
+        .category-icon {
+          background-color: $icon-bg-purple;
+          i {
+            color: $icon-color-purple;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        background-color: $color-forth;
+        color: white;
+
+        .category-icon {
+          background-color: white;
+          i {
+            color: $color-forth;
+          }
+        }
+
+        .category-info {
+          color: white;
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        background-color: $color-sixth;
+
+        .category-icon {
+          background-color: $icon-bg-blue;
+          i {
+            color: $icon-color-blue;
+          }
+        }
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        background-color: $color-fifth;
+
+        .category-icon {
+          background-color: $icon-bg-green;
+          i {
+            color: $icon-color-green;
+          }
+        }
+      }
+
+      &:nth-child(7) {
+        background-color: $color-third;
+
+        .category-icon {
+          background-color: #fae0d1;
+          i {
+            color: $color-forth;
+          }
+        }
+      }
+    }
+  }
+}
