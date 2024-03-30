@@ -1,0 +1,45 @@
+.hero__wrapper {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    .hero__content {
+      &-title {
+        font-weight: 600;
+      }
+
+      &-desc {
+        color: $p-primary;
+        line-height: 2rem;
+        margin: 2rem 0;
+      }
+
+      &-list {
+        color: $p-primary;
+        li {
+          margin-bottom: 1rem;
+          i {
+            color: $icon-color-green;
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      &-btn {
+        margin-top: 0.5rem;
+        display: inline-block;
+        @include pageBtn(1.2rem, 2rem);
+        border-radius: 0.5rem;
+      }
+    }
+
+    .hero__image {
+      &-border {
+        img {
+          border-top-right-radius: 10rem;
+        }
+      }
+    }
+  }
+}
