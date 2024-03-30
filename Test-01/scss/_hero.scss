@@ -1,22 +1,22 @@
 .hero__wrapper {
+  padding: 8rem 0;
+
   .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    display: flex;
+    gap: 5rem;
 
     .hero__content {
-      &-title {
-        font-weight: 600;
-      }
+      flex-grow: 0;
 
       &-desc {
         color: $p-primary;
-        line-height: 2rem;
+        line-height: 2.5rem;
         margin: 2rem 0;
       }
 
       &-list {
         color: $p-primary;
+
         li {
           margin-bottom: 1rem;
           i {
@@ -27,7 +27,7 @@
       }
 
       &-btn {
-        margin-top: 0.5rem;
+        margin-top: 2rem;
         display: inline-block;
         @include pageBtn(1.2rem, 2rem);
         border-radius: 0.5rem;
@@ -35,9 +35,25 @@
     }
 
     .hero__image {
+      @include pageImage();
+      flex-grow: 0;
+      flex-shrink: 0;
+      position: relative;
+
       &-border {
+        width: 100%;
+        height: 100%;
+        border: 3px solid $btn-primary;
+        border-top-right-radius: 10rem;
+
         img {
           border-top-right-radius: 10rem;
+          width: 100%;
+          object-fit: cover;
+          position: absolute;
+          z-index: 2;
+          top: 3rem;
+          left: -3rem;
         }
       }
     }

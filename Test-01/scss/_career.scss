@@ -1,0 +1,40 @@
+.career__wrapper {
+  background-color: $color-primary;
+  padding: 5rem 0;
+
+  .career__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+
+    .career {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2.5rem;
+      background-color: white;
+      padding: 3rem 1.5rem;
+
+      .career__image {
+        @include pageAvatar(6rem, 6rem);
+      }
+
+      .career__content {
+        &-title {
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+          color: $p-primary;
+        }
+
+        &-desc {
+          margin-bottom: 1rem;
+        }
+
+        &-btn {
+          @include pageBtn(1.5rem, 2rem);
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+}

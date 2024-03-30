@@ -1,0 +1,45 @@
+.footer__wrapper {
+  background-color: $bg-footer;
+  padding-top: 5rem;
+
+  & * {
+    color: white;
+  }
+
+  .footer__info__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 2rem;
+
+    .footer__info {
+      &-title {
+        margin-bottom: 3rem;
+      }
+
+      &-link {
+        .link {
+          margin-bottom: 1.5rem;
+          a {
+            color: $p-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__bottom {
+    border-top: 0.1rem solid $p-secondary;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & * {
+      color: $p-secondary;
+    }
+
+    &-medias > i {
+      padding-right: 2rem;
+    }
+  }
+}

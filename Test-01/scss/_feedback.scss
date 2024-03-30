@@ -1,0 +1,68 @@
+.feedback__wrapper {
+  background-color: $color-secondary;
+  padding: 5rem 0;
+
+  .feedback__slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-btn {
+      display: flex;
+      gap: 2rem;
+
+      button {
+        @include pageSliderBtn;
+      }
+    }
+  }
+
+  .feedback__cards {
+    margin-top: 4rem;
+    display: flex;
+    gap: 2.5rem;
+
+    .card {
+      padding: 2rem 1.5rem;
+      border-top-right-radius: 5rem;
+      background-color: $card-color-grey;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 50%;
+
+      .card__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        &-student {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &-avatar {
+            @include pageAvatar;
+            margin-right: 1rem;
+          }
+
+          &-name {
+            color: $p-primary;
+            font-weight: 600;
+          }
+        }
+
+        &-rate {
+          i {
+            color: $color-forth;
+          }
+        }
+      }
+
+      &:hover {
+        background-color: white;
+        border-left: 0.3rem solid $color-forth;
+      }
+    }
+  }
+}

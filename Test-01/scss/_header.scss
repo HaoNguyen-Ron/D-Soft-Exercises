@@ -4,39 +4,46 @@
     flex-grow: 0;
     flex-shrink: 0;
     margin-right: 4rem;
+
     img {
       width: 10rem;
       height: 9rem;
     }
   }
-  
+
   .header__nav {
     margin-right: 5.5rem;
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .nav__list {
+      display: flex;
+
       .nav__item {
         margin-right: 3.2rem;
-  
+        font-size: 1.2rem;
+
         i {
           font-size: 0.8rem;
         }
-  
+
         &:last-child {
           margin-right: 0;
         }
       }
     }
   }
-  
+
   .header__action {
     .header__action-search {
       margin-right: 3.5rem;
     }
-  
+
     .header__action-cart {
       margin-right: 2.7rem;
     }
-  
+
     .header__action-register {
       button {
         border-radius: 0.3rem;
@@ -44,5 +51,4 @@
       }
     }
   }
-  
 }
