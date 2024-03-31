@@ -27,844 +27,977 @@
     />
 
     <link
-      href="
-https://cdn.jsdelivr.net/npm/@icon/themify-icons@1.0.1-alpha.3/themify-icons.min.css
-"
+      href="https://cdn.jsdelivr.net/npm/@icon/themify-icons@1.0.1-alpha.3/themify-icons.min.css"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <header>
-      <div class="header__wrapper">
-        <div class="container d-flex">
-          <div class="header__logo">
-            <img
-              src="./asset/image/logo.png"
-              alt="Skillfy main logo"
-              class="img-fluid"
-            />
-          </div>
-
-          <nav
-            class="header__nav"
-          >
-            <ul class="nav__list d-flex">
-              <li class="nav__item d-flex align-items-center">
-                Home
-                <i class="ti ti-angle-down ms-1"></i>
-              </li>
-              <li class="nav__item d-flex align-items-center">
-                Pages
-                <i class="ti ti-angle-down ms-1"></i>
-              </li>
-              <li class="nav__item d-flex align-items-center">
-                Courses
-                <i class="ti ti-angle-down ms-1"></i>
-              </li>
-              <li class="nav__item d-flex align-items-center">
-                Features
-                <i class="ti ti-angle-down ms-1"></i>
-              </li>
-              <li class="nav__item d-flex align-items-center">
-                Blog
-                <i class="ti ti-angle-down ms-1"></i>
-              </li>
-              <li class="nav__item d-flex align-items-center">
-                Shop
-                <i class="ti ti-angle-down ms-1"></i>
-              </li>
-            </ul>
-          </nav>
-
-          <div
-            class="header__action d-flex justify-content-center align-items-center"
-          >
-            <div class="header__action-search">
-              <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
+    <div class="page__wrapper">
+      <header>
+        <div class="header__wrapper">
+          <div class="wrapper">
+            <div class="header__logo">
+              <img
+                src="./asset/image/logo.png"
+                alt="Skillfy main logo"
+                class="img-fluid"
+              />
             </div>
 
-            <div class="header__action-cart">
-              <button>
-                <i class="ti ti-shopping-cart"></i>
-              </button>
-            </div>
+            <nav class="header__nav">
+              <ul class="nav__list d-flex">
+                <li class="nav__item d-flex align-items-center">
+                  Home
+                  <i class="ti ti-angle-down ms-1"></i>
+                </li>
 
-            <div class="header__action-register">
-              <button class="btn-primary">Register</button>
+                <li class="nav__item d-flex align-items-center">
+                  Pages
+                  <i class="ti ti-angle-down ms-1"></i>
+                </li>
+
+                <li class="nav__item d-flex align-items-center">
+                  Courses
+                  <i class="ti ti-angle-down ms-1"></i>
+                </li>
+                <li class="nav__item d-flex align-items-center">
+                  Features
+                  <i class="ti ti-angle-down ms-1"></i>
+                </li>
+                <li class="nav__item d-flex align-items-center">
+                  Blog
+                  <i class="ti ti-angle-down ms-1"></i>
+                </li>
+                <li class="nav__item d-flex align-items-center">
+                  Shop
+                  <i class="ti ti-angle-down ms-1"></i>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="header__action">
+              <div class="header__action-search">
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+              <div class="header__action-cart">
+                <button>
+                  <i class="ti ti-shopping-cart"></i>
+                </button>
+              </div>
+              <div class="header__action-register">
+                <button class="btn-primary">Register</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
 
-    <main>
-      <div class="banner__wrapper">
-        <div class="container">
-          <div class="banner__content">
-            <div class="banner__content-title">
-              Turn your ambition into a success story
+        <div class="header__responsive">
+          <div class="wrapper">
+            <div class="header__logo">
+              <img
+                src="./asset/image/logo.png"
+                alt="Skillfy main logo"
+                class="img-fluid"
+              />
             </div>
 
-            <div class="banner__content-desc">
-              Choose from over 100.000 online video courses with new addtions
-              published every month.
-            </div>
-
-            <div class="banner__content-input d-flex">
-              <input type="text" placeholder="Search your favourite course" />
-              <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="header__nav">
+              <button
+                class="btn header__toggle__nav"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+              >
+                <i class="fa-solid fa-bars"></i>
               </button>
+
+              <div
+                class="offcanvas offcanvas-start"
+                data-bs-scroll="true"
+                tabindex="-1"
+                id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel"
+              >
+                <div class="offcanvas-header">
+                  <h1
+                    class="offcanvas-title"
+                    id="offcanvasWithBothOptionsLabel"
+                  >
+                    Skilltify
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <nav class="offcanvas-body">
+                  <ul class="nav__list">
+                    <li class="nav__item d-flex align-items-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Home
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item d-flex align-items-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Pages
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item d-flex align-items-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Courses
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item d-flex align-items-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Home
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item d-flex align-items-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Blog
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item d-flex align-items-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Shop
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="header__action">
+                <div class="header__action-cart">
+                  <button>
+                    <i class="ti ti-shopping-cart"></i>
+                  </button>
+                </div>
+                <div class="header__action-register">
+                  <button class="btn-primary">Register</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="header__search">
+              <div class="input-group header__search">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search for course here"
+                  aria-label="Recipient's username"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="button-addon2"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
             </div>
           </div>
+        </div>
+      </header>
 
-          <div class="banner__image">
-            <div class="banner__image-border">
+      <main>
+        <div class="banner__wrapper">
+          <div class="wrapper">
+            <div class="banner__content">
+              <div class="banner__content-title">
+                Turn your ambition into a success story
+              </div>
+
+              <div class="banner__content-desc">
+                Choose from over 100.000 online video courses with new addtions
+                published every month.
+              </div>
+
+              <div class="banner__content-input d-flex">
+                <input type="text" placeholder="Search your favourite course" />
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="banner__image">
               <img src="./asset/image/image1.jpg" />
             </div>
           </div>
         </div>
-      </div>
 
-      <section class="course__wrapper">
-        <div class="container">
-          <div class="course__selection">
-            <h1 class="course__selection-title">Get choice of your courses</h1>
+        <section class="course__wrapper">
+          <div class="wrapper">
+            <div class="course__selection">
+              <h1 class="course__selection-title">
+                Get choice of your courses
+              </h1>
+              <div class="course__selection-filter">
+                <button>
+                  Design
+                  <i class="ti ti-angle-down ms-1"></i>
+                </button>
+                <button>View all</button>
+              </div>
+            </div>
 
-            <div class="course__selection-filter">
-              <button>
-                Design
-                <i class="ti ti-angle-down ms-1"></i>
+            <div class="course__list">
+              <div class="course">
+                <div class="course__image">
+                  <img
+                    class="img-fluid"
+                    src="./asset/image/course-image1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="course__dashboard">
+                  <p class="course__dashboard-rate">
+                    <i class="ti ti-star"></i>
+                    4.5(120)
+                  </p>
+                  <p class="course__dashboard-view">
+                    <i class="ti ti-eye"></i>
+                    28.500
+                  </p>
+                  <p class="course__dashboard-lesson">
+                    <i class="ti ti-arrow-circle-right"></i>
+                    36 lessons
+                  </p>
+                </div>
+                <div class="course__info">
+                  <div class="course__info-title">
+                    Everything You Need to Know About Business
+                  </div>
+                  <div class="course__info-content">
+                    <div class="course__info-content-avatar">
+                      <img src="./asset/image/avatar.jpg" alt="" />
+                      <div>Nicole Brown</div>
+                    </div>
+                    <div class="course__info-content-price">
+                      <div class="price-original">$99.99</div>
+                      <div class="price-sale">$49.65</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course">
+                <div class="course__image">
+                  <img
+                    class="img-fluid"
+                    src="./asset/image/course-image1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="course__dashboard">
+                  <p class="course__dashboard-rate">
+                    <i class="ti ti-star"></i>
+                    4.5(120)
+                  </p>
+                  <p class="course__dashboard-view">
+                    <i class="ti ti-eye"></i>
+                    28.500
+                  </p>
+                  <p class="course__dashboard-lesson">
+                    <i class="ti ti-arrow-circle-right"></i>
+                    36 lessons
+                  </p>
+                </div>
+                <div class="course__info">
+                  <div class="course__info-title">
+                    Everything You Need to Know About Business
+                  </div>
+                  <div class="course__info-content">
+                    <div class="course__info-content-avatar">
+                      <img src="./asset/image/avatar.jpg" alt="" />
+                      Nicole Brown
+                    </div>
+                    <div class="course__info-content-price">
+                      <div class="price-original">$99.99</div>
+                      <div class="price-sale">$49.65</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course">
+                <div class="course__image">
+                  <img
+                    class="img-fluid"
+                    src="./asset/image/course-image1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="course__dashboard">
+                  <p class="course__dashboard-rate">
+                    <i class="ti ti-star"></i>
+                    4.5(120)
+                  </p>
+                  <p class="course__dashboard-view">
+                    <i class="ti ti-eye"></i>
+                    28.500
+                  </p>
+                  <p class="course__dashboard-lesson">
+                    <i class="ti ti-arrow-circle-right"></i>
+                    36 lessons
+                  </p>
+                </div>
+                <div class="course__info">
+                  <div class="course__info-title">
+                    Everything You Need to Know About Business
+                  </div>
+                  <div class="course__info-content">
+                    <div class="course__info-content-avatar">
+                      <img src="./asset/image/avatar.jpg" alt="" />
+                      <div>Nicole Brown</div>
+                    </div>
+                    <div class="course__info-content-price">
+                      <div class="price-original">$99.99</div>
+                      <div class="price-sale">$49.65</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course">
+                <div class="course__image">
+                  <img
+                    class="img-fluid"
+                    src="./asset/image/course-image1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="course__dashboard">
+                  <p class="course__dashboard-rate">
+                    <i class="ti ti-star"></i>
+                    4.5(120)
+                  </p>
+                  <p class="course__dashboard-view">
+                    <i class="ti ti-eye"></i>
+                    28.500
+                  </p>
+                  <p class="course__dashboard-lesson">
+                    <i class="ti ti-arrow-circle-right"></i>
+                    36 lessons
+                  </p>
+                </div>
+                <div class="course__info">
+                  <div class="course__info-title">
+                    Everything You Need to Know About Business
+                  </div>
+                  <div class="course__info-content">
+                    <div class="course__info-content-avatar">
+                      <img src="./asset/image/avatar.jpg" alt="" />
+                      <div>Nicole Brown</div>
+                    </div>
+                    <div class="course__info-content-price">
+                      <div class="price-original">$99.99</div>
+                      <div class="price-sale">$49.65</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course">
+                <div class="course__image">
+                  <img
+                    class="img-fluid"
+                    src="./asset/image/course-image1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="course__dashboard">
+                  <p class="course__dashboard-rate">
+                    <i class="ti ti-star"></i>
+                    4.5(120)
+                  </p>
+                  <p class="course__dashboard-view">
+                    <i class="ti ti-eye"></i>
+                    28.500
+                  </p>
+                  <p class="course__dashboard-lesson">
+                    <i class="ti ti-arrow-circle-right"></i>
+                    36 lessons
+                  </p>
+                </div>
+                <div class="course__info">
+                  <div class="course__info-title">
+                    Everything You Need to Know About Business
+                  </div>
+                  <div class="course__info-content">
+                    <div class="course__info-content-avatar">
+                      <img src="./asset/image/avatar.jpg" alt="" />
+                      <div>Nicole Brown</div>
+                    </div>
+                    <div class="course__info-content-price">
+                      <div class="price-original">$99.99</div>
+                      <div class="price-sale">$49.65</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course__slider">
+              <button id="prev-btn" class="course__slider-btn" disabled>
+                <i class="ti ti-arrow-left"></i>
               </button>
-
-              <button>View all</button>
+              <div class="course__slider-track">
+                <div class="course__slider-thumb"></div>
+              </div>
+              <button id="next-btn" class="course__slider-btn">
+                <i class="ti ti-arrow-right"></i>
+              </button>
             </div>
           </div>
+        </section>
 
-          <div class="course__list">
-            <div class="course">
-              <div class="course__image">
-                <img
-                  class="img-fluid"
-                  src="./asset/image/course-image1.jpg"
-                  alt=""
-                />
-              </div>
-
-              <div class="course__dashboard">
-                <p class="course__dashboard-rate">
-                  <i class="ti ti-star"></i>
-                  4.5(120)
-                </p>
-
-                <p class="course__dashboard-view">
-                  <i class="ti ti-eye"></i>
-                  28.500
-                </p>
-
-                <p class="course__dashboard-lesson">
-                  <i class="ti ti-arrow-circle-right"></i>
-                  36 lessons
-                </p>
-              </div>
-
-              <div class="course__info">
-                <div class="course__info-title">
-                  Everything You Need to Know About Business
-                </div>
-
-                <div class="course__info-content">
-                  <div class="course__info-content-avatar">
-                    <img src="./asset/image/avatar.jpg" alt="" />
-
-                    <div>Nicole Brown</div>
-                  </div>
-
-                  <div class="course__info-content-price">
-                    <div class="price-original">$99.99</div>
-                    <div class="price-sale">$49.65</div>
-                  </div>
-                </div>
+        <article class="category__wrapper">
+          <div class="wrapper">
+            <div class="category__selection">
+              <h1 class="category__selection-title">
+                Choose favourite course from top category
+              </h1>
+              <div class="category__selection-filter">
+                <button>See all categories</button>
               </div>
             </div>
-
-            <div class="course">
-              <div class="course__image">
-                <img
-                  class="img-fluid"
-                  src="./asset/image/course-image1.jpg"
-                  alt=""
-                />
-              </div>
-
-              <div class="course__dashboard">
-                <p class="course__dashboard-rate">
-                  <i class="ti ti-star"></i>
-                  4.5(120)
-                </p>
-
-                <p class="course__dashboard-view">
-                  <i class="ti ti-eye"></i>
-                  28.500
-                </p>
-
-                <p class="course__dashboard-lesson">
-                  <i class="ti ti-arrow-circle-right"></i>
-                  36 lessons
-                </p>
-              </div>
-
-              <div class="course__info">
-                <div class="course__info-title">
-                  Everything You Need to Know About Business
+            <div class="category__list">
+              <div class="category">
+                <div class="category-icon">
+                  <i class="fa-solid fa-swatchbook"></i>
                 </div>
-
-                <div class="course__info-content">
-                  <div class="course__info-content-avatar">
-                    <img src="./asset/image/avatar.jpg" alt="" />
-
-                    Nicole Brown
-                  </div>
-
-                  <div class="course__info-content-price">
-                    <div class="price-original">$99.99</div>
-                    <div class="price-sale">$49.65</div>
-                  </div>
+                <div class="category-title">Design</div>
+                <p class="category-info">
+                  Learn Adobe Illustrator CC graphic design , logo design, and
+                  more with this in-depth , practical, easy
+                </p>
+              </div>
+              <div class="category">
+                <div class="category-icon">
+                  <i class="fa-solid fa-desktop"></i>
                 </div>
-              </div>
-            </div>
-
-            <div class="course">
-              <div class="course__image">
-                <img
-                  class="img-fluid"
-                  src="./asset/image/course-image1.jpg"
-                  alt=""
-                />
-              </div>
-
-              <div class="course__dashboard">
-                <p class="course__dashboard-rate">
-                  <i class="ti ti-star"></i>
-                  4.5(120)
-                </p>
-
-                <p class="course__dashboard-view">
-                  <i class="ti ti-eye"></i>
-                  28.500
-                </p>
-
-                <p class="course__dashboard-lesson">
-                  <i class="ti ti-arrow-circle-right"></i>
-                  36 lessons
+                <div class="category-title">Development</div>
+                <p class="category-info">
+                  Learn Adobe Illustrator CC graphic design , logo design, and
+                  more with this in-depth , practical, easy
                 </p>
               </div>
-
-              <div class="course__info">
-                <div class="course__info-title">
-                  Everything You Need to Know About Business
+              <div class="category">
+                <div class="category-icon">
+                  <i class="fa-solid fa-code"></i>
                 </div>
-
-                <div class="course__info-content">
-                  <div class="course__info-content-avatar">
-                    <img src="./asset/image/avatar.jpg" alt="" />
-
-                    <div>Nicole Brown</div>
-                  </div>
-
-                  <div class="course__info-content-price">
-                    <div class="price-original">$99.99</div>
-                    <div class="price-sale">$49.65</div>
-                  </div>
+                <div class="category-title">IT & Software</div>
+                <p class="category-info">
+                  Learn Adobe Illustrator CC graphic design , logo design, and
+                  more with this in-depth , practical, easy
+                </p>
+              </div>
+              <div class="category">
+                <div class="category-icon">
+                  <i class="fa-solid fa-suitcase"></i>
                 </div>
-              </div>
-            </div>
-
-            <div class="course">
-              <div class="course__image">
-                <img
-                  class="img-fluid"
-                  src="./asset/image/course-image1.jpg"
-                  alt=""
-                />
-              </div>
-
-              <div class="course__dashboard">
-                <p class="course__dashboard-rate">
-                  <i class="ti ti-star"></i>
-                  4.5(120)
-                </p>
-
-                <p class="course__dashboard-view">
-                  <i class="ti ti-eye"></i>
-                  28.500
-                </p>
-
-                <p class="course__dashboard-lesson">
-                  <i class="ti ti-arrow-circle-right"></i>
-                  36 lessons
+                <div class="category-title">Business</div>
+                <p class="category-info">
+                  Learn Adobe Illustrator CC graphic design , logo design, and
+                  more with this in-depth , practical, easy
                 </p>
               </div>
-
-              <div class="course__info">
-                <div class="course__info-title">
-                  Everything You Need to Know About Business
+              <div class="category">
+                <div class="category-icon">
+                  <i class="fa-solid fa-volume-high"></i>
                 </div>
-
-                <div class="course__info-content">
-                  <div class="course__info-content-avatar">
-                    <img src="./asset/image/avatar.jpg" alt="" />
-
-                    <div>Nicole Brown</div>
-                  </div>
-
-                  <div class="course__info-content-price">
-                    <div class="price-original">$99.99</div>
-                    <div class="price-sale">$49.65</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="course">
-              <div class="course__image">
-                <img
-                  class="img-fluid"
-                  src="./asset/image/course-image1.jpg"
-                  alt=""
-                />
-              </div>
-
-              <div class="course__dashboard">
-                <p class="course__dashboard-rate">
-                  <i class="ti ti-star"></i>
-                  4.5(120)
-                </p>
-
-                <p class="course__dashboard-view">
-                  <i class="ti ti-eye"></i>
-                  28.500
-                </p>
-
-                <p class="course__dashboard-lesson">
-                  <i class="ti ti-arrow-circle-right"></i>
-                  36 lessons
+                <div class="category-title">Marketing</div>
+                <p class="category-info">
+                  Learn Adobe Illustrator CC graphic design , logo design, and
+                  more with this in-depth , practical, easy
                 </p>
               </div>
-
-              <div class="course__info">
-                <div class="course__info-title">
-                  Everything You Need to Know About Business
+              <div class="category">
+                <div class="category-icon">
+                  <i class="fa-solid fa-volume-high"></i>
                 </div>
-
-                <div class="course__info-content">
-                  <div class="course__info-content-avatar">
-                    <img src="./asset/image/avatar.jpg" alt="" />
-
-                    <div>Nicole Brown</div>
-                  </div>
-
-                  <div class="course__info-content-price">
-                    <div class="price-original">$99.99</div>
-                    <div class="price-sale">$49.65</div>
-                  </div>
+                <div class="category-title">Photography</div>
+                <p class="category-info">
+                  Learn Adobe Illustrator CC graphic design , logo design, and
+                  more with this in-depth , practical, easy
+                </p>
+              </div>
+              <div class="category">
+                <div class="category-icon">
+                  <i class="fa-regular fa-heart"></i>
                 </div>
+                <div class="category-title">Health & Care</div>
+                <p class="category-info">
+                  Learn Adobe Illustrator CC graphic design , logo design, and
+                  more with this in-depth , practical, easy
+                </p>
+              </div>
+              <div class="category">
+                <div class="category-icon">
+                  <i class="fa-solid fa-house-signal"></i>
+                </div>
+                <div class="category-title">Technology</div>
+                <p class="category-info">
+                  Learn Adobe Illustrator CC graphic design , logo design, and
+                  more with this in-depth , practical, easy
+                </p>
               </div>
             </div>
           </div>
+        </article>
 
-          <div class="course__slider">
-            <button id="prev-btn" class="course__slider-btn" disabled>
-              <i class="ti ti-arrow-left"></i>
-            </button>
-
-            <div class="course__slider-track">
-              <div class="course__slider-thumb"></div>
-            </div>
-
-            <button id="next-btn" class="course__slider-btn">
-              <i class="ti ti-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <article class="category__wrapper">
-        <div class="container">
-          <div class="category__selection">
-            <h1 class="category__selection-title">
-              Choose favourite course from top category
+        <div class="advertise__wrapper">
+          <div class="advertise__content">
+            <h1 class="advertise__content-title">
+              Online Coaching Lessons For Remote Learning
             </h1>
+            <div class="advertise__content-desc">
+              100% online learning from the world's best universities and
+              companies
+            </div>
+            <button class="advertise__content-btn">Join now</button>
+          </div>
+          <div class="advertise__deco">
+            <img
+              class="advertise__deco-avatar"
+              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
+              alt="Teachers Avatar"
+            />
+            <img
+              class="advertise__deco-avatar"
+              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
+              alt="Teachers Avatar"
+            />
+            <img
+              class="advertise__deco-avatar"
+              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
+              alt="Teachers Avatar"
+            />
+            <img
+              class="advertise__deco-avatar"
+              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
+              alt="Teachers Avatar"
+            />
+            <img
+              class="advertise__deco-avatar"
+              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
+              alt="Teachers Avatar"
+            />
+            <img
+              class="advertise__deco-avatar"
+              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
+              alt="Teachers Avatar"
+            />
+            <div class="advertise__deco-ring"></div>
+            <div class="advertise__deco-ring"></div>
+          </div>
+        </div>
 
-            <div class="category__selection-filter">
-              <button>See all categories</button>
+        <section class="hero__wrapper">
+          <div class="wrapper">
+            <div class="hero__content">
+              <h1 class="hero__content-title">Know about learning platform</h1>
+              
+              <div class="hero__content-desc">
+                With our growing datalog of over 30 Nanodegree programs from
+                beginner to advance , you are sure to find one that fits your
+                career goals
+              </div>
+
+              <ul class="hero__content-list">
+                <li>
+                  <i class="fa-regular fa-square-check"></i>
+                  Free E-Book,Video & Consolation
+                </li>
+                <li>
+                  <i class="fa-regular fa-square-check"></i>
+                  Top instructors around the world
+                </li>
+                <li>
+                  <i class="fa-regular fa-square-check"></i>
+                  Top courses for your team
+                </li>
+              </ul>
+              <buttom class="hero__content-btn"> Start learning now </buttom>
+            </div>
+            <div class="hero__image">
+              <div class="hero__image-border">
+                <img
+                  src="https://img.freepik.com/free-photo/smiling-asian-man-using-tablet-computer_1262-18324.jpg?t=st=1711732474~exp=1711736074~hmac=926f5f8ce71307394f7dcf083eb0072d1dfa305bac7ee6a895e105b8a657d6e5&w=1380"
+                  alt="teacher"
+                />
+              </div>
             </div>
           </div>
+        </section>
 
-          <div class="category__list">
-            <div class="category">
-              <div class="category-icon">
-                <i class="fa-solid fa-swatchbook"></i>
+        <div class="feedback__wrapper">
+          <div class="wrapper">
+            <div class="feedback__slider">
+              <h1 class="feedback__slider-title">
+                What our students have to say
+              </h1>
+              <div class="feedback__slider-btn">
+                <button id="prev-btn" disabled>
+                  <i class="ti ti-arrow-left"></i>
+                </button>
+                <button id="next-btn">
+                  <i class="ti ti-arrow-right"></i>
+                </button>
               </div>
-
-              <div class="category-title">Design</div>
-
-              <p class="category-info">
-                Learn Adobe Illustrator CC graphic design , logo design, and
-                more with this in-depth , practical, easy
-              </p>
+              <div class="feedback__slider-btn responsive">
+                <button id="prev-btn" disabled>
+                  <i class="ti ti-arrow-up"></i>
+                </button>
+                <button id="next-btn">
+                  <i class="ti ti-arrow-down"></i>
+                </button>
+              </div>
             </div>
-
-            <div class="category">
-              <div class="category-icon">
-                <i class="fa-solid fa-desktop"></i>
+            <div class="feedback__cards">
+              <div class="card">
+                <div class="card__title">
+                  <div class="card__title-student">
+                    <img
+                      class="card__title-student-avatar"
+                      src="https://img.freepik.com/free-photo/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack_1258-55849.jpg?t=st=1711805436~exp=1711809036~hmac=96fdefb4f271c3322c84ea5fc41a051cf9025e7fa1f82adf52da807ab6a8d806&w=1380"
+                      alt="Student image"
+                    />
+                    <div class="card__title-student-name">
+                      Themadbrains
+                      <p>student</p>
+                    </div>
+                  </div>
+                  <div class="card__title-rate">
+                    <i class="ti ti-star"></i>
+                    <i class="ti ti-star"></i>
+                    <i class="ti ti-star"></i>
+                    <i class="ti ti-star"></i>
+                    <i class="ti ti-star"></i>
+                  </div>
+                </div>
+                <p class="card__title-desc">
+                  Skillfy is a life savior. I don't have the time/money for a
+                  college education. My goal is to become the freelancer web
+                  developer, and thanks to Skillfy
+                </p>
               </div>
-
-              <div class="category-title">Development</div>
-
-              <p class="category-info">
-                Learn Adobe Illustrator CC graphic design , logo design, and
-                more with this in-depth , practical, easy
-              </p>
-            </div>
-
-            <div class="category">
-              <div class="category-icon">
-                <i class="fa-solid fa-code"></i>
+              <div class="card">
+                <div class="card__title">
+                  <div class="card__title-student">
+                    <img
+                      class="card__title-student-avatar"
+                      src="https://img.freepik.com/free-photo/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack_1258-55849.jpg?t=st=1711805436~exp=1711809036~hmac=96fdefb4f271c3322c84ea5fc41a051cf9025e7fa1f82adf52da807ab6a8d806&w=1380"
+                      alt="Student image"
+                    />
+                    <div class="card__title-student-name">
+                      Themadbrains
+                      <p>student</p>
+                    </div>
+                  </div>
+                  <div class="card__title-rate">
+                    <i class="ti ti-star"></i>
+                    <i class="ti ti-star"></i>
+                    <i class="ti ti-star"></i>
+                    <i class="ti ti-star"></i>
+                    <i class="ti ti-star"></i>
+                  </div>
+                </div>
+                <p class="card__title-desc">
+                  Skillfy is a life savior. I don't have the time/money for a
+                  college education. My goal is to become the freelancer web
+                  developer, and thanks to Skillfy
+                </p>
               </div>
-
-              <div class="category-title">IT & Software</div>
-
-              <p class="category-info">
-                Learn Adobe Illustrator CC graphic design , logo design, and
-                more with this in-depth , practical, easy
-              </p>
-            </div>
-
-            <div class="category">
-              <div class="category-icon">
-                <i class="fa-solid fa-suitcase"></i>
-              </div>
-
-              <div class="category-title">Business</div>
-
-              <p class="category-info">
-                Learn Adobe Illustrator CC graphic design , logo design, and
-                more with this in-depth , practical, easy
-              </p>
-            </div>
-
-            <div class="category">
-              <div class="category-icon">
-                <i class="fa-solid fa-volume-high"></i>
-              </div>
-
-              <div class="category-title">Marketing</div>
-
-              <p class="category-info">
-                Learn Adobe Illustrator CC graphic design , logo design, and
-                more with this in-depth , practical, easy
-              </p>
-            </div>
-
-            <div class="category">
-              <div class="category-icon">
-                <i class="fa-solid fa-volume-high"></i>
-              </div>
-
-              <div class="category-title">Photography</div>
-
-              <p class="category-info">
-                Learn Adobe Illustrator CC graphic design , logo design, and
-                more with this in-depth , practical, easy
-              </p>
-            </div>
-
-            <div class="category">
-              <div class="category-icon">
-                <i class="fa-regular fa-heart"></i>
-              </div>
-
-              <div class="category-title">Health & Care</div>
-
-              <p class="category-info">
-                Learn Adobe Illustrator CC graphic design , logo design, and
-                more with this in-depth , practical, easy
-              </p>
-            </div>
-
-            <div class="category">
-              <div class="category-icon">
-                <i class="fa-solid fa-house-signal"></i>
-              </div>
-
-              <div class="category-title">Technology</div>
-
-              <p class="category-info">
-                Learn Adobe Illustrator CC graphic design , logo design, and
-                more with this in-depth , practical, easy
-              </p>
             </div>
           </div>
         </div>
-      </article>
 
-      <div class="advertise__wrapper">
-        <div class="advertise__content">
-          <h1 class="advertise__content-title">
-            Online Coaching Lessons For Remote Learning
-          </h1>
+        <div class="partner__wrapper">
+          <div class="wrapper">
+            <div class="partner__slider">
+              <h1 class="partner__slider-title">
+                Trusted by our awesome partners
+              </h1>
 
-          <div class="advertise__content-desc">
-            100% online learning from the world's best universities and
-            companies
-          </div>
+              <div class="partner__slider-btn">
+                <button id="prev-btn" disabled>
+                  <i class="ti ti-arrow-left"></i>
+                </button>
 
-          <button class="advertise__content-btn">Join now</button>
-        </div>
+                <button id="next-btn">
+                  <i class="ti ti-arrow-right"></i>
+                </button>
+              </div>
 
-        <div class="advertise__deco">
-          <img
-            class="advertise__deco-avatar"
-            src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
-            alt="Teachers Avatar"
-          />
-
-          <img
-            class="advertise__deco-avatar"
-            src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
-            alt="Teachers Avatar"
-          />
-
-          <img
-            class="advertise__deco-avatar"
-            src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
-            alt="Teachers Avatar"
-          />
-
-          <img
-            class="advertise__deco-avatar"
-            src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
-            alt="Teachers Avatar"
-          />
-
-          <img
-            class="advertise__deco-avatar"
-            src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
-            alt="Teachers Avatar"
-          />
-
-          <img
-            class="advertise__deco-avatar"
-            src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1711797612~exp=1711801212~hmac=381e4f573a7c699a54947ffe8302c49cc0af15f5f8baebc6aac5671e635ee461&w=1380"
-            alt="Teachers Avatar"
-          />
-
-          <div class="advertise__deco-ring"></div>
-          <div class="advertise__deco-ring"></div>
-        </div>
-      </div>
-
-      <section class="hero__wrapper">
-        <div class="container">
-          <div class="hero__content">
-            <h1 class="hero__content-title">Know about learning platform</h1>
-
-            <div class="hero__content-desc">
-              With our growing datalog of over 30 Nanodegree programs from
-              beginner to advance , you are sure to find one that fits your
-              career goals
+              <div class="partner__slider-btn responsive">
+                <button id="prev-btn" disabled>
+                  <i class="ti ti-arrow-up"></i>
+                </button>
+                <button id="next-btn">
+                  <i class="ti ti-arrow-down"></i>
+                </button>
+              </div>
             </div>
-
-            <ul class="hero__content-list">
-              <li>
-                <i class="fa-regular fa-square-check"></i>
-                Free E-Book,Video & Consolation
-              </li>
-              <li>
-                <i class="fa-regular fa-square-check"></i>
-                Top instructors around the world
-              </li>
-              <li>
-                <i class="fa-regular fa-square-check"></i>
-                Top courses for your team
-              </li>
-            </ul>
-
-            <buttom class="hero__content-btn"> Start learning now </buttom>
-          </div>
-
-          <div class="hero__image">
-            <div class="hero__image-border">
+            <div class="partner__list">
               <img
-                src="https://img.freepik.com/free-photo/smiling-asian-man-using-tablet-computer_1262-18324.jpg?t=st=1711732474~exp=1711736074~hmac=926f5f8ce71307394f7dcf083eb0072d1dfa305bac7ee6a895e105b8a657d6e5&w=1380"
-                alt="teacher"
+                class="partner"
+                src="https://logowik.com/content/uploads/images/envato-new-20208156.jpg"
+                alt="Partner Envato"
+              />
+              <img
+                class="partner"
+                src="https://logowik.com/content/uploads/images/dribbble-new-20235066.logowik.com.webp"
+                alt="Partner Dribbble"
+              />
+              <img
+                class="partner"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIaqFriqmaUulcUPoVzsUyzQE3zzJw9NaEWoPG2AAao7lTktehKa4P2gadOG-rg3U6ho&usqp=CAU"
+                alt="Partner Behance"
+              />
+              <img
+                class="partner"
+                src="https://www.edigitalagency.com.au/wp-content/uploads/slack-logo-png-1.png"
+                alt="Partner Slack"
+              />
+              <img
+                class="partner"
+                src="https://logowik.com/content/uploads/images/udemy-new-20212512.jpg"
+                alt="Partner Udemy"
+              />
+              <img
+                class="partner"
+                src="https://pbs.twimg.com/profile_images/1455292838934102017/C1ntsrVO_400x400.jpg"
+                alt="Partner Google Education"
               />
             </div>
           </div>
         </div>
-      </section>
 
-      <div class="feedback__wrapper">
-        <div class="container">
-          <div class="feedback__slider">
-            <h1 class="feedback__slider-title">
-              What our students have to say
-            </h1>
-
-            <div class="feedback__slider-btn">
-              <button id="prev-btn" disabled>
-                <i class="ti ti-arrow-left"></i>
-              </button>
-
-              <button id="next-btn">
-                <i class="ti ti-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <div class="feedback__cards">
-            <div class="card">
-              <div class="card__title">
-                <div class="card__title-student">
-                  <img
-                    class="card__title-student-avatar"
-                    src="https://img.freepik.com/free-photo/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack_1258-55849.jpg?t=st=1711805436~exp=1711809036~hmac=96fdefb4f271c3322c84ea5fc41a051cf9025e7fa1f82adf52da807ab6a8d806&w=1380"
-                    alt="Student image"
-                  />
-
-                  <div class="card__title-student-name">
-                    Themadbrains
-                    <p>student</p>
+        <div class="career__wrapper">
+          <div class="wrapper">
+            <div class="career__list">
+              <div class="career">
+                <img
+                  src="https://img.freepik.com/free-photo/women-all-ages-using-laptop_23-2148462931.jpg?t=st=1711816890~exp=1711820490~hmac=1256f2354b3812b5740577ae206c3acaced62e9c8b1de64271def4faf1f81aee&w=1380"
+                  class="career__image"
+                  alt="career image"
+                />
+                <div class="career__content">
+                  <div class="career__content-title">Become a teacher</div>
+                  <p class="career__content-desc">
+                    Teacher what you love. Coursector gives you the tools to
+                    create a course
+                  </p>
+                  <button class="career__content-btn">Apply as teacher</button>
+                </div>
+              </div>
+              <div class="career">
+                <img
+                  src="https://img.freepik.com/free-photo/women-all-ages-using-laptop_23-2148462931.jpg?t=st=1711816890~exp=1711820490~hmac=1256f2354b3812b5740577ae206c3acaced62e9c8b1de64271def4faf1f81aee&w=1380"
+                  class="career__image"
+                  alt="career image"
+                />
+                <div class="career__content">
+                  <div class="career__content-title">
+                    Coursector for Business
                   </div>
-                </div>
-
-                <div class="card__title-rate">
-                  <i class="ti ti-star"></i>
-                  <i class="ti ti-star"></i>
-                  <i class="ti ti-star"></i>
-                  <i class="ti ti-star"></i>
-                  <i class="ti ti-star"></i>
+                  <p class="career__content-desc">
+                    Get unlimited access to +3000 of Coursector's top courses
+                    for your team
+                  </p>
+                  <button class="career__content-btn">
+                    Get Skillfy for Business
+                  </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </main>
 
-              <p class="card__title-desc">
-                Skillfy is a life savior. I don't have the time/money for a
-                college education. My goal is to become the freelancer web
-                developer, and thanks to Skillfy
+      <footer>
+        <div class="footer__wrapper">
+          <div class="wrapper">
+            <div class="footer__info__list">
+              <div class="footer__info">
+                <div class="footer__info-title">Company</div>
+
+                <ul class="footer__info-link">
+                  <li class="link"><a href="#">About</a></li>
+                  <li class="link"><a href="#">Careers</a></li>
+                  <li class="link"><a href="#">Press</a></li>
+                  <li class="link"><a href="#">Blogs</a></li>
+                  <li class="link"><a href="#">Affiliates</a></li>
+                </ul>
+              </div>
+
+              <div class="footer__info">
+                <div class="footer__info-title">Community</div>
+
+                <ul class="footer__info-link">
+                  <li class="link"><a href="#">Go premium</a></li>
+                  <li class="link"><a href="#">Team plans</a></li>
+                  <li class="link"><a href="#">Refer a friend</a></li>
+                  <li class="link"><a href="#">Gift cards</a></li>
+                  <li class="link"><a href="#">Scholarships</a></li>
+                  <li class="link"><a href="#">Free classes</a></li>
+                </ul>
+              </div>
+
+              <div class="footer__info">
+                <div class="footer__info-title">Teaching</div>
+
+                <ul class="footer__info-link">
+                  <li class="link"><a href="#">Become a Teacher</a></li>
+                  <li class="link"><a href="#">Teaching Academy</a></li>
+                  <li class="link"><a href="#">Teacher Handbook</a></li>
+                  <li class="link"><a href="#">Partnerships</a></li>
+                </ul>
+              </div>
+
+              <div class="footer__info">
+                <div class="footer__info-title">Support</div>
+
+                <ul class="footer__info-link">
+                  <li class="link"><a href="#">Support</a></li>
+                  <li class="link"><a href="#">Contact Us</a></li>
+                  <li class="link"><a href="#">System Requirement</a></li>
+                  <li class="link"><a href="#">Register Activation key</a></li>
+                  <li class="link"><a href="#">Site Feedback</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__bottom">
+              <p class="footer__bottom-trademark">
+                @2015-2020 Skillfy Education Private Limited. All rights
+                servered
               </p>
-            </div>
-
-            <div class="card">
-              <div class="card__title">
-                <div class="card__title-student">
-                  <img
-                    class="card__title-student-avatar"
-                    src="https://img.freepik.com/free-photo/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack_1258-55849.jpg?t=st=1711805436~exp=1711809036~hmac=96fdefb4f271c3322c84ea5fc41a051cf9025e7fa1f82adf52da807ab6a8d806&w=1380"
-                    alt="Student image"
-                  />
-
-                  <div class="card__title-student-name">
-                    Themadbrains
-                    <p>student</p>
-                  </div>
-                </div>
-
-                <div class="card__title-rate">
-                  <i class="ti ti-star"></i>
-                  <i class="ti ti-star"></i>
-                  <i class="ti ti-star"></i>
-                  <i class="ti ti-star"></i>
-                  <i class="ti ti-star"></i>
-                </div>
-              </div>
-
-              <p class="card__title-desc">
-                Skillfy is a life savior. I don't have the time/money for a
-                college education. My goal is to become the freelancer web
-                developer, and thanks to Skillfy
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="partner__wrapper">
-        <div class="container">
-          <div class="partner__slider">
-            <h1 class="partner__slider-title">
-              Trusted by our awesome partners
-            </h1>
-
-            <div class="partner__slider-btn">
-              <button id="prev-btn" disabled>
-                <i class="ti ti-arrow-left"></i>
-              </button>
-
-              <button id="next-btn">
-                <i class="ti ti-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <div class="partner__list">
-            <img
-              class="partner"
-              src="https://logowik.com/content/uploads/images/envato-new-20208156.jpg"
-              alt="Partner Envato"
-            />
-
-            <img
-              class="partner"
-              src="https://logowik.com/content/uploads/images/dribbble-new-20235066.logowik.com.webp"
-              alt="Partner Dribbble"
-            />
-
-            <img
-              class="partner"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIaqFriqmaUulcUPoVzsUyzQE3zzJw9NaEWoPG2AAao7lTktehKa4P2gadOG-rg3U6ho&usqp=CAU"
-              alt="Partner Behance"
-            />
-            <img
-              class="partner"
-              src="https://www.edigitalagency.com.au/wp-content/uploads/slack-logo-png-1.png"
-              alt="Partner Slack"
-            />
-            <img
-              class="partner"
-              src="https://logowik.com/content/uploads/images/udemy-new-20212512.jpg"
-              alt="Partner Udemy"
-            />
-            <img
-              class="partner"
-              src="https://pbs.twimg.com/profile_images/1455292838934102017/C1ntsrVO_400x400.jpg"
-              alt="Partner Google Education"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="career__wrapper">
-        <div class="container">
-          <div class="career__list">
-            <div class="career">
-              <img src="https://img.freepik.com/free-photo/women-all-ages-using-laptop_23-2148462931.jpg?t=st=1711816890~exp=1711820490~hmac=1256f2354b3812b5740577ae206c3acaced62e9c8b1de64271def4faf1f81aee&w=1380" class="career__image"></img>
-
-              <div class="career__content">
-                <div class="career__content-title">
-                  Become a teacher
-                </div>
-                <p class="career__content-desc">
-                  Teacher what you love. Coursector gives you the tools to create a course
-                </p>
-
-                <button class="career__content-btn">
-                  Apply as teacher
-                </button>
-              </div>
-            </div>
-
-            <div class="career">
-              <img src="https://img.freepik.com/free-photo/women-all-ages-using-laptop_23-2148462931.jpg?t=st=1711816890~exp=1711820490~hmac=1256f2354b3812b5740577ae206c3acaced62e9c8b1de64271def4faf1f81aee&w=1380" class="career__image"></img>
-
-              <div class="career__content">
-                <div class="career__content-title">
-                  Coursector for Business
-                </div>
-                <p class="career__content-desc">
-                  Get unlimited access to +3000 of Coursector's top courses for your team
-                </p>
-
-                <button class="career__content-btn">
-                  Get Skillfy for Business
-                </button>
+              <div class="footer__bottom-medias">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-linkedin"></i>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </footer>
+    </div>
 
-    <footer>
-      <div class="footer__wrapper">
-        <div class="container">
-          <div class="footer__info__list">
-            <div class="footer__info">
-              <div class="footer__info-title">
-                Company
-              </div>
-
-              <ul class="footer__info-link">
-                <li class="link"><a href="#">About</a></li>
-                <li class="link"><a href="#">Careers</a></li>
-                <li class="link"><a href="#">Press</a></li>
-                <li class="link"><a href="#">Blogs</a></li>
-                <li class="link"><a href="#">Affiliates</a></li>
-              </ul>
-            </div>
-
-            <div class="footer__info">
-              <div class="footer__info-title">
-                Community
-              </div>
-
-              <ul class="footer__info-link">
-                <li class="link"><a href="#">Go premium</a></li>
-                <li class="link"><a href="#">Team plans</a></li>
-                <li class="link"><a href="#">Refer a friend</a></li>
-                <li class="link"><a href="#">Gift cards</a></li>
-                <li class="link"><a href="#">Scholarships</a></li>
-                <li class="link"><a href="#">Free classes</a></li>
-              </ul>
-            </div>
-
-            <div class="footer__info">
-              <div class="footer__info-title">
-                Teaching
-              </div>
-
-              <ul class="footer__info-link">
-                <li class="link"><a href="#">Become a Teacher</a></li>
-                <li class="link"><a href="#">Teaching Academy</a></li>
-                <li class="link"><a href="#">Teacher Handbook</a></li>
-                <li class="link"><a href="#">Partnerships</a></li>
-              </ul>
-            </div>
-
-            <div class="footer__info">
-              <div class="footer__info-title">
-                Support
-              </div>
-
-              <ul class="footer__info-link">
-                <li class="link"><a href="#">Support</a></li>
-                <li class="link"><a href="#">Contact Us</a></li>
-                <li class="link"><a href="#">System Requirement</a></li>
-                <li class="link"><a href="#">Register Activation key</a></li>
-                <li class="link"><a href="#">Site Feedback</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="footer__bottom">
-            <p class="footer__bottom-trademark">
-              @2015-2020 Skillfy Education Private Limited. All rights servered
-            </p>
-
-            <div class="footer__bottom-medias">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-google"></i>
-              <i class="fa-brands fa-linkedin"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

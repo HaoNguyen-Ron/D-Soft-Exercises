@@ -1,0 +1,28 @@
+@media screen and (max-width: 991px) {
+  .advertise__wrapper {
+    .advertise__deco {
+      &-avatar {
+        &:nth-child(1) {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:nth-child(5) {
+          display: none;
+        }
+
+        &:nth-child(6) {
+          display: none;
+        }
+      }
+
+      .advertise__deco-ring:first-of-type {
+        top: 90%;
+        left: 23rem;
+      }
+    }
+  }
+}

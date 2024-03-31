@@ -1,0 +1,21 @@
+@media screen and (max-width: 991px) {
+  .partner__wrapper {
+    .wrapper {
+      padding: 0 1rem;
+
+      .partner__slider {
+        flex-direction: column;
+        gap: 2rem;
+
+        &-btn {
+          display: none;
+        }
+
+        .responsive {
+          display: flex;
+          gap: 2rem;
+        }
+      }
+    }
+  }
+}

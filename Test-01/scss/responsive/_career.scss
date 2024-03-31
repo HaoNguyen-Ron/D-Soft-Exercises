@@ -1,0 +1,15 @@
+@media screen and (max-width: 991px) {
+  .career__wrapper {
+    .wrapper {
+      padding: 0 1rem;
+      .career__list {
+        display: flex;
+        flex-direction: column;
+
+        .career {
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@media screen and (max-width: 991px) {
+  .banner__wrapper {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .banner__content {
+        padding: 0 7rem;
+        &-input {
+        }
+      }
+    }
+  }
+}

@@ -7,9 +7,8 @@
   }
 
   .footer__info__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: 2rem;
 
     .footer__info {

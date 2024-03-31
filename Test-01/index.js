@@ -1,11 +1,12 @@
 const sliderInit = () => {
-    const sliderBtns = document.querySelectorAll('.course__slider .course__slider-btn')
-    const sliderCourses = document.querySelector('.course__list')
+    const sliderBtns = document.querySelectorAll('.course__slider-btn')
+
+    const courseList = document.querySelector('.course__list')
 
     const sliderScrollBar = document.querySelector('.course__slider')
     const sliderScrollBarThumb = sliderScrollBar.querySelector('.course__slider-thumb')
 
-    const sliderLeftMax = sliderCourses.scrollWidth - sliderCourses.clientWidth;
+    const sliderLeftMax = courseList.scrollWidth - courseList.clientWidth;
 
     sliderScrollBarThumb.addEventListener('mousedown', (event) => {
         const startX = event.clientX
@@ -20,7 +21,7 @@ const sliderInit = () => {
             const scrollPosition = (thumbBoundary / maxThumbPosition) * sliderLeftMax
 
             sliderScrollBarThumb.style.left = `${thumbBoundary}`
-            sliderCourses.scrollLeft = scrollPosition
+            courseList.scrollLeft = scrollPosition
         }
 
         const handleMouseUp = () => {
@@ -36,8 +37,10 @@ const sliderInit = () => {
     sliderBtns.forEach((button) => {
         button.addEventListener('click', () => {
             const direction = button.id === 'prev-btn' ? -1 : 1
-            const slideAmount = sliderCourses.clientWidth * direction
-            sliderCourses.scrollBy({
+
+            const slideAmount = courseList.clientWidth * direction
+
+            courseList.scrollBy({
                 left: slideAmount,
                 behavior: 'smooth'
             })
@@ -45,18 +48,18 @@ const sliderInit = () => {
     })
 
     const handleDisableBtn = () => {
-        sliderBtns[0].disabled = sliderCourses.scrollLeft <= 0;
-        sliderBtns[1].disabled = sliderCourses.scrollLeft >= sliderLeftMax;
+        sliderBtns[0].disabled = courseList.scrollLeft <= 0;
+        sliderBtns[1].disabled = courseList.scrollLeft >= sliderLeftMax;
     }
 
     const updateSlideThumbPosition = () => {
-        const scrollPostion = sliderCourses.scrollLeft
-        const thumbPosition = ((scrollPostion / sliderLeftMax) * (sliderScrollBar.clientWidth - sliderScrollBarThumb.offsetWidth) / 10)
+        const scrollPostion = courseList.scrollLeft
+        const thumbPosition = ((scrollPostion / sliderLeftMax) * (sliderScrollBar.clientWidth - sliderScrollBarThumb.offsetWidth))
 
-        sliderScrollBarThumb.style.left = `${thumbPosition}rem`
+        sliderScrollBarThumb.style.left = `${thumbPosition}px`
     }
 
-    sliderCourses.addEventListener('scroll', () => {
+    courseList.addEventListener('scroll', () => {
         handleDisableBtn()
         updateSlideThumbPosition()
     })

@@ -1,0 +1,22 @@
+@media screen and (max-width: 991px) {
+  .hero__wrapper {
+    .wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .hero__content {
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &-desc {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
