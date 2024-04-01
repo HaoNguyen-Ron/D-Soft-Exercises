@@ -49,11 +49,12 @@
 
     .banner__image {
       @include pageImage();
+
       flex-shrink: 0;
       flex-grow: 0;
-      position: relative;
       border: 3px solid $color-forth;
       border-radius: 2rem;
+      position: relative;
 
       img {
         object-fit: cover;
@@ -62,6 +63,22 @@
         z-index: 2;
         top: -3rem;
         left: -3rem;
+      }
+
+      i {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        font-size: 2rem;
+        color: $btn-primary;
+        background-color: white;
+        border-radius: 50%;
+        line-height: 8rem;
+        width: 8rem;
+        height: 8rem;
+        text-align: center;
       }
     }
   }
