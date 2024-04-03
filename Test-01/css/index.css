@@ -212,6 +212,9 @@ h1 {
 
 .header__wrapper {
   background-color: #fef0ef;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
 }
 .header__wrapper .wrapper {
   display: flex;
@@ -264,7 +267,7 @@ h1 {
 }
 
 .banner__wrapper {
-  padding-top: 10rem;
+  padding-top: 15rem;
   padding-bottom: 5rem;
   background-color: #fef0ef;
 }
@@ -921,6 +924,46 @@ h1 {
   border-radius: 0.5rem;
 }
 
+.class__wrapper {
+  padding: 5rem 0;
+}
+.class__wrapper .class__selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.class__wrapper .class__selection-filter {
+  padding: 1.5rem 2rem;
+  background-color: #f66962;
+  color: white;
+  border-radius: 0.5rem;
+}
+.class__wrapper .class__list .class {
+  min-width: 25rem;
+}
+.class__wrapper .class__list .class .class__image {
+  position: relative;
+  height: 20rem;
+}
+.class__wrapper .class__list .class .class__image-avatar {
+  position: absolute;
+  width: auto;
+  height: 25rem;
+  object-fit: cover;
+  filter: drop-shadow(5px 5px 5px #666);
+  z-index: 3;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.class__wrapper .class__list .class .class__image-background {
+  position: absolute;
+  width: 20rem;
+  height: 18rem;
+  background-color: #65d673;
+  z-index: 2;
+  bottom: 0;
+}
 .footer__wrapper {
   background-color: #282834;
   padding-top: 5rem;
