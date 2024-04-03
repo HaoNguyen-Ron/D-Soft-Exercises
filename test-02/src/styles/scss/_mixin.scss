@@ -1,0 +1,49 @@
+@mixin pageBtn($py, $px, $bg: $btn-primary) {
+  padding: $py $px;
+  background-color: $bg;
+  color: white;
+}
+
+@mixin pageImage($width: 35rem, $height: 39rem) {
+  width: $width;
+  height: $height;
+}
+
+@mixin pageAvatar($width: 5rem, $height: 5rem) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+
+@mixin pageSliderBtn() {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  background-color: white;
+
+  i {
+    color: $color-forth;
+  }
+
+  &:hover {
+    opacity: 1;
+    background-color: #dddd;
+    i {
+      color: $color-forth;
+    }
+  }
+
+  &[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+
+    &:hover {
+      border: 1px solid #999999;
+      background-color: #cccccc;
+      i {
+        color: #666666;
+      }
+    }
+  }
+}
