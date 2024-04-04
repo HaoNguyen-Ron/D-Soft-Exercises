@@ -1,0 +1,75 @@
+.advertise__wrapper {
+  background-color: $color-primary;
+  position: relative;
+  padding: 4rem 0;
+
+  .advertise__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 10rem;
+
+    &-btn {
+      @include pageBtn(1.2rem, 2rem);
+      border-radius: 0.5rem;
+    }
+  }
+
+  .advertise__deco {
+    &-avatar {
+      position: absolute;
+      @include pageAvatar(5.5rem, 5.5rem);
+
+      &:first-child {
+        top: 4rem;
+        left: 25rem;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        left: 12rem;
+        transform: translate(-50%, -50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 4rem;
+        left: 30rem;
+      }
+
+      &:nth-child(4) {
+        top: 3rem;
+        right: 25rem;
+      }
+
+      &:nth-child(5) {
+        top: 50%;
+        right: 5rem;
+        transform: translate(-50%, -50%);
+      }
+
+      &:nth-child(6) {
+        bottom: 4rem;
+        right: 30rem;
+      }
+    }
+
+    &-ring {
+      @include pageAvatar(3rem, 3rem);
+      position: absolute;
+      border: 1rem solid $btn-primary;
+
+      &:first-of-type {
+        top: 50%;
+        left: 23rem;
+        transform: translate(-50%, -50%);
+      }
+
+      &:last-of-type {
+        top: 6rem;
+        right: 12rem;
+      }
+    }
+  }
+}

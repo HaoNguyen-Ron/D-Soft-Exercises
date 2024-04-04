@@ -1,0 +1,13 @@
+@import 'commons/variables';
+@import 'commons/reset';
+@import 'commons/global';
+@import 'commons/mixin';
+
+@import 'layout/footer.scss';
+@import 'layout/header.scss';
+
+@import 'mains/banner.scss';
+@import 'mains/course.scss';
+@import 'mains/category.scss';
+@import 'mains/advertise.scss';
+@import 'mains/feedback.scss';

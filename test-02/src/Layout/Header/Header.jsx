@@ -1,4 +1,6 @@
 import React from 'react'
+import logo from 'asset/image/logo.png'
+import { HEADER_NAV } from 'constants/constant'
 
 export default function Header() {
   return (
@@ -6,38 +8,20 @@ export default function Header() {
       <>
         <div className='header__wrapper'>
           <div className='wrapper'>
-            <a href='#' className='header__logo'>
-              <img src='./asset/image/logo.png' alt='Skillfy main logo' className='img-fluid' />
+            <a href='/' className='header__logo'>
+              <img src={logo} alt='Skillfy main logo' className='img-fluid' />
             </a>
 
             <nav className='header__nav'>
               <ul className='nav__list d-flex'>
-                <li className='nav__item d-flex align-items-center'>
-                  Home
-                  <i className='ti ti-angle-down ms-1'></i>
-                </li>
-
-                <li className='nav__item d-flex align-items-center'>
-                  Pages
-                  <i className='ti ti-angle-down ms-1'></i>
-                </li>
-
-                <li className='nav__item d-flex align-items-center'>
-                  Courses
-                  <i className='ti ti-angle-down ms-1'></i>
-                </li>
-                <li className='nav__item d-flex align-items-center'>
-                  Features
-                  <i className='ti ti-angle-down ms-1'></i>
-                </li>
-                <li className='nav__item d-flex align-items-center'>
-                  Blog
-                  <i className='ti ti-angle-down ms-1'></i>
-                </li>
-                <li className='nav__item d-flex align-items-center'>
-                  Shop
-                  <i className='ti ti-angle-down ms-1'></i>
-                </li>
+                {HEADER_NAV.map((nav, index) => {
+                  return (
+                    <li className='nav__item d-flex align-items-center' key={index}>
+                      {nav}
+                      <i className='ti ti-angle-down ms-1'></i>
+                    </li>
+                  )
+                })}
               </ul>
             </nav>
 
@@ -61,8 +45,8 @@ export default function Header() {
 
         <div className='header__responsive'>
           <div className='wrapper'>
-            <a href='#' className='header__logo'>
-              <img src='./asset/image/logo.png' alt='Skillfy main logo' className='img-fluid' />
+            <a href='/' className='header__logo'>
+              <img src={logo} alt='Skillfy main logo' className='img-fluid' />
             </a>
 
             <div className='header__nav'>
@@ -103,17 +87,17 @@ export default function Header() {
                         </button>
                         <ul className='dropdown-menu'>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Another action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Something else here
                             </a>
                           </li>
@@ -132,17 +116,17 @@ export default function Header() {
                         </button>
                         <ul className='dropdown-menu'>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Another action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Something else here
                             </a>
                           </li>
@@ -161,17 +145,17 @@ export default function Header() {
                         </button>
                         <ul className='dropdown-menu'>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Another action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Something else here
                             </a>
                           </li>
@@ -190,17 +174,17 @@ export default function Header() {
                         </button>
                         <ul className='dropdown-menu'>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Another action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Something else here
                             </a>
                           </li>
@@ -219,17 +203,17 @@ export default function Header() {
                         </button>
                         <ul className='dropdown-menu'>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Another action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Something else here
                             </a>
                           </li>
@@ -248,17 +232,17 @@ export default function Header() {
                         </button>
                         <ul className='dropdown-menu'>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Another action
                             </a>
                           </li>
                           <li>
-                            <a className='dropdown-item' href='#'>
+                            <a className='dropdown-item' href='/'>
                               Something else here
                             </a>
                           </li>

@@ -1,98 +1,30 @@
 import React from 'react'
 
+import { FOOTER_INFOS } from 'constants/constant'
+
 export default function Footer() {
   return (
     <footer>
       <div class='footer__wrapper'>
         <div class='wrapper'>
           <div class='footer__info__list'>
-            <div class='footer__info'>
-              <div class='footer__info-title'>Company</div>
+            {FOOTER_INFOS.map((info) => {
+              return (
+                <div class='footer__info' key={info.id}>
+                  <div class='footer__info-title'>{info.title}</div>
 
-              <ul class='footer__info-link'>
-                <li class='link'>
-                  <a href='#'>About</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Careers</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Press</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Blogs</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Affiliates</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class='footer__info'>
-              <div class='footer__info-title'>Community</div>
-
-              <ul class='footer__info-link'>
-                <li class='link'>
-                  <a href='#'>Go premium</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Team plans</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Refer a friend</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Gift cards</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Scholarships</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Free classes</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class='footer__info'>
-              <div class='footer__info-title'>Teaching</div>
-
-              <ul class='footer__info-link'>
-                <li class='link'>
-                  <a href='#'>Become a Teacher</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Teaching Academy</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Teacher Handbook</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Partnerships</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class='footer__info'>
-              <div class='footer__info-title'>Support</div>
-
-              <ul class='footer__info-link'>
-                <li class='link'>
-                  <a href='#'>Support</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Contact Us</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>System Requirement</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Register Activation key</a>
-                </li>
-                <li class='link'>
-                  <a href='#'>Site Feedback</a>
-                </li>
-              </ul>
-            </div>
+                  <ul class='footer__info-link'>
+                    {info.links.map((link, index) => {
+                      return (
+                        <li class='link' key={index}>
+                          <a href='/'>{link}</a>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              )
+            })}
           </div>
           <div class='footer__bottom'>
             <p class='footer__bottom-trademark'>@2015-2020 Skillfy Education Private Limited. All rights servered</p>
