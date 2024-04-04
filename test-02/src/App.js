@@ -7,6 +7,8 @@ import Course from 'Components/Course/Course'
 import './App.scss'
 import Advertise from 'Components/Advertise'
 import Feedback from 'Components/Feedback'
+import Partner from 'Components/Partner'
+import Career from 'Components/Career'
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
         <Advertise />
 
         <Feedback />
+
+        <Partner />
+
+        <Career />
       </Layout>
     </div>
   )

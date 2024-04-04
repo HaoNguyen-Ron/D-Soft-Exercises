@@ -16,7 +16,7 @@ export default function Category() {
         <div className='category__list'>
           {CATEGORY_FAKE_API.map((category) => {
             return (
-              <div className='category'>
+              <div className='category' key={category.id}>
                 <div className='category-icon'>
                   <i className={category.icon}></i>
                 </div>

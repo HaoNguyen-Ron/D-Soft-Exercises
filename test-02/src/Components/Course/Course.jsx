@@ -1,7 +1,17 @@
+import React, { useRef, useState } from 'react'
+
 import { COURSE_FAKE_API } from 'constants/constant'
-import React from 'react'
 
 export default function Course() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [thumbProgress, setThumbProgress] = useState(0)
+
+  const courseRef = useRef()
+
+  const handleSlideClick = (direction) => {
+    
+  }
+
   return (
     <section className='course__wrapper'>
       <div className='wrapper'>
@@ -17,7 +27,7 @@ export default function Course() {
           </div>
         </div>
 
-        <div className='course__list'>
+        <div className='course__list' ref={courseRef}>
           {COURSE_FAKE_API.map((course) => {
             return (
               <div className='course' key={course.id}>
@@ -64,7 +74,7 @@ export default function Course() {
         </div>
 
         <div className='course__slider'>
-          <button id='prev-btn' className='course__slider-btn' disabled>
+          <button id='prev-btn' className='course__slider-btn' onClick={() => handleSlideClick('prev')}>
             <i className='ti ti-arrow-left'></i>
           </button>
 
@@ -72,7 +82,7 @@ export default function Course() {
             <div className='course__slider-thumb'></div>
           </div>
 
-          <button id='next-btn' className='course__slider-btn'>
+          <button id='next-btn' className='course__slider-btn' onClick={() => handleSlideClick('next')}>
             <i className='ti ti-arrow-right'></i>
           </button>
         </div>

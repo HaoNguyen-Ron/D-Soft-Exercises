@@ -30,11 +30,11 @@ export default function Feedback() {
             let stars = []
 
             for (let i = 0; i < feedback.rate; i++) {
-              stars.push(<i key={feedback.id} className='ti ti-star'></i>)
+              stars.push(<i key={`${feedback.id}-${i}`} className='ti ti-star'></i>)
             }
 
             return (
-              <div className='card'>
+              <div className='card' key={feedback.id}>
                 <div className='card__title'>
                   <div className='card__title-student'>
                     <img className='card__title-student-avatar' src={feedback.avatar} alt='Student img' />

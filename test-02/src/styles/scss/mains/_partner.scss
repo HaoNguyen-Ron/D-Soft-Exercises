@@ -1,0 +1,34 @@
+.partner__wrapper {
+  padding: 5rem 0;
+
+  .partner__slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    &-btn {
+      display: flex;
+      gap: 2rem;
+
+      button {
+        @include pageSliderBtn;
+        background-color: $color-secondary;
+      }
+    }
+
+    .responsive {
+      display: none;
+    }
+  }
+
+  .partner__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+
+    .partner {
+      object-fit: contain;
+    }
+  }
+}

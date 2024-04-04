@@ -175,3 +175,36 @@ export const FEEDBACK_FAKE_API = [
       "Skillfy is a life savior. I don't have the time/money for a college education. My goal is to become the freelancer web developer, and thanks to Skillfy"
   }
 ]
+
+export const PARTNER_FAKE_API = [
+  {
+    id: 1,
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIaqFriqmaUulcUPoVzsUyzQE3zzJw9NaEWoPG2AAao7lTktehKa4P2gadOG-rg3U6ho&usqp=CAU',
+    name: 'Envato'
+  },
+  {
+    id: 2,
+    logo: 'https://logowik.com/content/uploads/images/dribbble-new-20235066.logowik.com.webp',
+    name: 'Dribbble'
+  },
+  {
+    id: 3,
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIaqFriqmaUulcUPoVzsUyzQE3zzJw9NaEWoPG2AAao7lTktehKa4P2gadOG-rg3U6ho&usqp=CAU',
+    name: 'Behance'
+  },
+  {
+    id: 4,
+    logo: 'https://www.edigitalagency.com.au/wp-content/uploads/slack-logo-png-1.png',
+    name: 'Slack'
+  },
+  {
+    id: 5,
+    logo: 'https://logowik.com/content/uploads/images/udemy-new-20212512.jpg',
+    name: 'Udemy'
+  },
+  {
+    id: 6,
+    logo: 'https://pbs.twimg.com/profile_images/1455292838934102017/C1ntsrVO_400x400.jpg',
+    name: 'Google Education'
+  }
+]

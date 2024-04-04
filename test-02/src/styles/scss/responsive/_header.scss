@@ -1,0 +1,101 @@
+@media screen and (max-width: 991px) {
+  .header__wrapper {
+    display: none;
+  }
+
+  .header__responsive {
+    background-color: $color-primary;
+    display: block;
+
+    .wrapper {
+      .header__logo {
+        margin-bottom: 4rem;
+
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 20rem;
+          height: 20rem;
+          border-radius: 50%;
+        }
+      }
+
+      .header__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 0 2rem;
+
+        .header__toggle__nav {
+          border: 0.2rem solid #dddd;
+          font-size: 3rem;
+        }
+
+        .offcanvas {
+          &-header {
+            background-color: $color-primary;
+
+            .offcanvas-title {
+              font-size: 4.5rem;
+            }
+          }
+
+          &-body {
+            & * {
+              font-size: 2.5rem;
+            }
+
+            .nav__list {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              gap: 4rem;
+            }
+          }
+        }
+
+        .header__action {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+
+          &-cart {
+            button {
+              padding: 0.5rem;
+              font-size: 3rem;
+            }
+          }
+
+          &-register {
+            button {
+              @include pageBtn(2rem, 2rem);
+              border-radius: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .header__search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 0 2rem;
+
+        .form-control {
+          padding: 1rem 2rem;
+        }
+
+        .btn {
+          width: 3rem;
+          height: 3rem;
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
