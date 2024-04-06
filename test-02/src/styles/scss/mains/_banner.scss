@@ -2,11 +2,35 @@
   padding-top: 15rem;
   padding-bottom: 5rem;
   background-color: $color-primary;
+  position: relative;
+
+  .banner__deco {
+    .banner__deco__dot {
+      position: absolute;
+      z-index: 1;
+
+      .dot__wrapper {
+        .dot {
+          background-color: $color-forth;
+        }
+      }
+
+      &:first-child {
+        bottom: 0;
+      }
+
+      &:last-child {
+        right: 6rem;
+      }
+    }
+  }
 
   .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10rem;
+    position: relative;
+    z-index: 2;
 
     .banner__content {
       margin-top: 1rem;

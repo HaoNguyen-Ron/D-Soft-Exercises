@@ -13,21 +13,23 @@ import Career from 'Components/Career'
 function App() {
   return (
     <div className='App'>
-      <Layout>
-        <Banner />
+      <div className='page__wrapper'>
+        <Layout>
+          <Banner />
 
-        <Course />
+          <Course />
 
-        <Category />
+          <Category />
 
-        <Advertise />
+          <Advertise />
 
-        <Feedback />
+          <Feedback />
 
-        <Partner />
+          <Partner />
 
-        <Career />
-      </Layout>
+          <Career />
+        </Layout>
+      </div>
     </div>
   )
 }

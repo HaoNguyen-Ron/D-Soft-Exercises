@@ -1,16 +1,38 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { COURSE_FAKE_API } from 'constants/constant'
+import CommonCard from 'Components/Common/CommonCard'
 
 export default function Course() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [thumbProgress, setThumbProgress] = useState(0)
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(false)
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(false)
 
   const courseRef = useRef()
 
   const handleSlideClick = (direction) => {
-    
+    if (courseRef.current) {
+      direction === 'prev' ? setCurrentIndex((prev) => prev - 1) : setCurrentIndex((prev) => prev + 1)
+
+      const slideAmount = courseRef.current.clientWidth * currentIndex
+      courseRef.current.scrollBy({
+        left: slideAmount,
+        behavior: 'smooth'
+      })
+    }
   }
+
+  useEffect(() => {
+    if (courseRef.current) {
+      // const checkScrollMax = courseRef.current.scrollWidth - courseRef.current.clientWidth
+      // if (courseRef.current.scrollLeft <= 0) {
+      //   setPrevBtnDisabled(true)
+      // } else if (courseRef.current.scrollLeft >= checkScrollMax) {
+      //   setNextBtnDisabled(true)
+      // }
+    }
+  }, [])
 
   return (
     <section className='course__wrapper'>
@@ -29,47 +51,7 @@ export default function Course() {
 
         <div className='course__list' ref={courseRef}>
           {COURSE_FAKE_API.map((course) => {
-            return (
-              <div className='course' key={course.id}>
-                <div className='course__image'>
-                  <img className='img-fluid' src={course.image.courseImage} alt='Course Teacher' />
-                </div>
-
-                <div className='course__dashboard'>
-                  <p className='course__dashboard-rate'>
-                    <i className='ti ti-star'></i>
-                    {course.rate}
-                  </p>
-
-                  <p className='course__dashboard-view'>
-                    <i className='ti ti-eye'></i>
-                    {course.view}
-                  </p>
-
-                  <p className='course__dashboard-lesson'>
-                    <i className='ti ti-arrow-circle-right'></i>
-                    {course.lessonLength}
-                  </p>
-                </div>
-
-                <div className='course__info'>
-                  <div className='course__info-title'>{course.title}</div>
-
-                  <div className='course__info-content'>
-                    <div className='course__info-content-avatar'>
-                      <img src={course.avatar.courseAvatar} alt='Teacher Avatar' />
-                      <div>{course.name}</div>
-                    </div>
-
-                    <div className='course__info-content-price'>
-                      <div className='price-original'>{course.coursePrice}</div>
-
-                      <div className='price-sale'>{course.courseDiscount}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )
+            return <CommonCard course={course} key={course.id} />
           })}
         </div>
 
@@ -82,7 +64,12 @@ export default function Course() {
             <div className='course__slider-thumb'></div>
           </div>
 
-          <button id='next-btn' className='course__slider-btn' onClick={() => handleSlideClick('next')}>
+          <button
+            id='next-btn'
+            className='course__slider-btn'
+            onClick={() => handleSlideClick('next')}
+            disabled={nextBtnDisabled ? 'disabled' : ''}
+          >
             <i className='ti ti-arrow-right'></i>
           </button>
         </div>

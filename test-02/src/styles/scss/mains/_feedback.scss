@@ -31,7 +31,7 @@
       border-top-right-radius: 5rem;
       background-color: $card-color-grey;
       flex-grow: 0;
-      flex-shrink: 0;
+      flex-shrink: 1;
       flex-basis: 50%;
 
       .card__title {

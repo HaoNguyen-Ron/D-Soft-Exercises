@@ -1,10 +1,21 @@
 import React from 'react'
 
 import banner from 'asset/image/banner-image.jpg'
+import CommonDotDeco from 'Components/Common/CommonDotDeco'
 
 export default function Banner() {
   return (
     <div className='banner__wrapper'>
+      <div className='banner__deco'>
+        <div className='banner__deco__dot'>
+          <CommonDotDeco />
+        </div>
+
+        <div className='banner__deco__dot'>
+          <CommonDotDeco />
+        </div>
+      </div>
+
       <div className='wrapper'>
         <div className='banner__content'>
           <div className='banner__content-title'>Turn your ambition into a success story</div>

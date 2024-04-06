@@ -47,3 +47,11 @@
     }
   }
 }
+
+@mixin pageDotDecoration($light: true) {
+  @if $light {
+    background-color: $dot-color-pink;
+  } @else {
+    background-color: $dot-color-grey;
+  }
+}

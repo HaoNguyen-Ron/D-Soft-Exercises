@@ -1,8 +1,8 @@
 .header__wrapper {
   background-color: $color-primary;
   position: fixed;
-  width: 100%;
   z-index: 99999;
+  width: 100%;
 
   .wrapper {
     display: flex;

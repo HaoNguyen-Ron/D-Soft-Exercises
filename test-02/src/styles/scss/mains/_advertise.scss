@@ -3,6 +3,29 @@
   position: relative;
   padding: 4rem 0;
 
+  .advertise__dot_deco-1 {
+    position: absolute;
+    bottom: 0;
+
+    .dot__wrapper {
+      .dot {
+        background-color: $dot-color-pink;
+      }
+    }
+  }
+
+  .advertise__dot_deco-2 {
+    position: absolute;
+    right: 6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    .dot__wrapper {
+      .dot {
+        background-color: $dot-color-grey;
+      }
+    }
+  }
+
   .advertise__content {
     display: flex;
     flex-direction: column;

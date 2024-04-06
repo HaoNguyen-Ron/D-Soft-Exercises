@@ -1,7 +1,7 @@
-@import 'commons/variables';
-@import 'commons/reset';
-@import 'commons/global';
-@import 'commons/mixin';
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/global';
+@import 'base/mixin';
 
 @import 'layout/footer.scss';
 @import 'layout/header.scss';
@@ -13,5 +13,7 @@
 @import 'mains/feedback.scss';
 @import 'mains/partner.scss';
 @import 'mains/career.scss';
+
+@import 'common/commonDotDeco.scss';
 
 @import 'responsive/index.scss';

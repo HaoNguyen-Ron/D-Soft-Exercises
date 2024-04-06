@@ -1,11 +1,42 @@
 .career__wrapper {
   background-color: $color-primary;
   padding: 5rem 0;
+  position: relative;
+
+  .career__deco {
+    .career__deco__dot {
+      z-index: 1;
+
+      &:first-child {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        .dot__wrapper {
+          .dot {
+            background-color: $dot-color-pink;
+          }
+        }
+      }
+
+      &:last-child {
+        position: absolute;
+        top: 0;
+        right: 6rem;
+        .dot__wrapper {
+          .dot {
+            background-color: $dot-color-grey;
+          }
+        }
+      }
+    }
+  }
 
   .career__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
+    position: relative;
+    z-index: 2;
 
     .career {
       display: flex;

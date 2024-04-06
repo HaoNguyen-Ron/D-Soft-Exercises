@@ -1,11 +1,22 @@
 import React from 'react'
 
 import { FOOTER_INFOS } from 'constants/constant'
+import CommonDotDeco from 'Components/Common/CommonDotDeco'
 
 export default function Footer() {
   return (
     <footer>
       <div className='footer__wrapper'>
+        <div className='footer__deco'>
+          <div className='footer__deco__dot'>
+            <CommonDotDeco />
+          </div>
+
+          <div className='footer__deco__dot'>
+            <CommonDotDeco />
+          </div>
+        </div>
+
         <div className='wrapper'>
           <div className='footer__info__list'>
             {FOOTER_INFOS.map((info) => {

@@ -1,8 +1,19 @@
+import CommonDotDeco from 'Components/Common/CommonDotDeco'
 import React from 'react'
 
 export default function Career() {
   return (
     <div className='career__wrapper'>
+      <div className='career__deco'>
+        <div className='career__deco__dot'>
+          <CommonDotDeco />
+        </div>
+
+        <div className='career__deco__dot'>
+          <CommonDotDeco />
+        </div>
+      </div>
+
       <div className='wrapper'>
         <div className='career__list'>
           <div className='career'>
@@ -19,6 +30,7 @@ export default function Career() {
               <button className='career__content-btn'>Apply as teacher</button>
             </div>
           </div>
+
           <div className='career'>
             <img
               src='https://img.freepik.com/free-photo/women-all-ages-using-laptop_23-2148462931.jpg?t=st=1711816890~exp=1711820490~hmac=1256f2354b3812b5740577ae206c3acaced62e9c8b1de64271def4faf1f81aee&w=1380'

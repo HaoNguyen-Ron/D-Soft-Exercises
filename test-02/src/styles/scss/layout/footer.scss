@@ -1,15 +1,39 @@
 .footer__wrapper {
   background-color: $bg-footer;
   padding-top: 5rem;
+  position: relative;
 
   & * {
     color: white;
+  }
+
+  .footer__deco {
+    .footer__deco__dot {
+      position: absolute;
+      z-index: 1;
+      .dot__wrapper {
+        .dot {
+          background-color: $dot-color-grey;
+        }
+      }
+      &:first-child {
+        top: 0;
+        left: 0;
+      }
+
+      &:last-child {
+        top: 0;
+        right: 6rem;
+      }
+    }
   }
 
   .footer__info__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
 
     .footer__info {
       &-title {

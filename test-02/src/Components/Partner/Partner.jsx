@@ -29,7 +29,7 @@ export default function Partner() {
         </div>
         <div className='partner__list'>
           {PARTNER_FAKE_API.map((partner) => {
-            return <img className='partner' src={partner.logo} alt={`Partner ${partner.name}`} key={partner.id}/>
+            return <img className='partner' src={partner.logo} alt={`Partner ${partner.name}`} key={partner.id} />
           })}
         </div>
       </div>
