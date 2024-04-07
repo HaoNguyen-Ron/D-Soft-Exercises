@@ -1,4 +1,4 @@
 import { memo } from 'react'
-import CommonCard from './CommonCard'
+import CommonCard from './CommonCourseCard'
 
 export default memo(CommonCard)

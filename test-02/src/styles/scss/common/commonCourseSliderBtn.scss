@@ -1,0 +1,32 @@
+.common__slider__button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  &-prev {
+    @include pageSliderBtn();
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .common__slider__button-track {
+    height: 0.5rem;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    border-radius: 0.4rem;
+    overflow: hidden;
+
+    .common__slider__button-track-thumb {
+      background-color: $color-forth;
+    }
+  }
+
+  &-next {
+    @include pageSliderBtn();
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}

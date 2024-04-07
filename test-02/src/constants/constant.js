@@ -173,6 +173,28 @@ export const FEEDBACK_FAKE_API = [
     rate: 5,
     comment:
       "Skillfy is a life savior. I don't have the time/money for a college education. My goal is to become the freelancer web developer, and thanks to Skillfy"
+  },
+
+  {
+    id: 3,
+    avatar:
+      'https://img.freepik.com/free-photo/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack_1258-55849.jpg?t=st=1711805436~exp=1711809036~hmac=96fdefb4f271c3322c84ea5fc41a051cf9025e7fa1f82adf52da807ab6a8d806&w=1380',
+    major: 'Themadbrains',
+    role: 'Student',
+    rate: 5,
+    comment:
+      "Skillfy is a life savior. I don't have the time/money for a college education. My goal is to become the freelancer web developer, and thanks to Skillfy"
+  },
+
+  {
+    id: 4,
+    avatar:
+      'https://img.freepik.com/free-photo/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack_1258-55849.jpg?t=st=1711805436~exp=1711809036~hmac=96fdefb4f271c3322c84ea5fc41a051cf9025e7fa1f82adf52da807ab6a8d806&w=1380',
+    major: 'UXUI  Designer',
+    role: 'Student',
+    rate: 5,
+    comment:
+      "Skillfy is a life savior. I don't have the time/money for a college education. My goal is to become the freelancer web developer, and thanks to Skillfy"
   }
 ]
 
@@ -204,6 +226,36 @@ export const PARTNER_FAKE_API = [
   },
   {
     id: 6,
+    logo: 'https://pbs.twimg.com/profile_images/1455292838934102017/C1ntsrVO_400x400.jpg',
+    name: 'Google Education'
+  },
+  {
+    id: 7,
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIaqFriqmaUulcUPoVzsUyzQE3zzJw9NaEWoPG2AAao7lTktehKa4P2gadOG-rg3U6ho&usqp=CAU',
+    name: 'Envato'
+  },
+  {
+    id: 8,
+    logo: 'https://logowik.com/content/uploads/images/dribbble-new-20235066.logowik.com.webp',
+    name: 'Dribbble'
+  },
+  {
+    id: 9,
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIaqFriqmaUulcUPoVzsUyzQE3zzJw9NaEWoPG2AAao7lTktehKa4P2gadOG-rg3U6ho&usqp=CAU',
+    name: 'Behance'
+  },
+  {
+    id: 10,
+    logo: 'https://www.edigitalagency.com.au/wp-content/uploads/slack-logo-png-1.png',
+    name: 'Slack'
+  },
+  {
+    id: 11,
+    logo: 'https://logowik.com/content/uploads/images/udemy-new-20212512.jpg',
+    name: 'Udemy'
+  },
+  {
+    id: 12,
     logo: 'https://pbs.twimg.com/profile_images/1455292838934102017/C1ntsrVO_400x400.jpg',
     name: 'Google Education'
   }

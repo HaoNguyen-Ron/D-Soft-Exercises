@@ -13,7 +13,6 @@ export default function Career() {
           <CommonDotDeco />
         </div>
       </div>
-
       <div className='wrapper'>
         <div className='career__list'>
           <div className='career'>

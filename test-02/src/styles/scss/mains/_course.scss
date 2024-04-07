@@ -14,6 +14,31 @@
     }
 
     &-filter {
+      display: flex;
+
+      &-dropdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .dropdown-menu {
+          padding: 2rem;
+          & > li {
+            margin-bottom: 2rem;
+
+            .dropdown-item {
+              font-size: 1.7rem;
+              &:hover {
+                background-color: transparent;
+              }
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
       button {
         &:first-child {
           margin-right: 1.5rem;
@@ -27,164 +52,7 @@
     }
   }
 
-  .course__list {
+  .course__carousel {
     padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
-    scrollbar-width: none;
-    margin-bottom: 2rem;
-    overflow-x: auto;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    .course {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1rem;
-      align-items: center;
-      background-color: white;
-      padding: 1rem 1rem;
-      border-radius: 0.5rem;
-      min-width: 24.5rem;
-
-      .course__image {
-        img {
-          border-radius: 0.5rem;
-          width: auto;
-          height: 20rem;
-          object-fit: cover;
-        }
-      }
-
-      .course__dashboard {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #f7f6fc;
-        padding: 1.2rem 0;
-
-        &-rate {
-          i {
-            color: #f5c467;
-          }
-        }
-
-        &-view {
-          i {
-            color: $color-forth;
-          }
-        }
-
-        &-lesson {
-          i {
-            color: #75b291;
-          }
-        }
-      }
-
-      .course__info {
-        &-title {
-          font-size: 1.7rem;
-          font-weight: 600;
-          margin-bottom: 2rem;
-        }
-
-        &-content {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          &-avatar {
-            display: flex;
-            align-items: center;
-            flex: 1 0 4rem;
-            color: $p-primary;
-            font-size: 1rem;
-
-            img {
-              @include pageAvatar();
-              margin-right: 1rem;
-            }
-          }
-
-          &-price {
-            display: flex;
-            gap: 1rem;
-            font-size: 1.4rem;
-
-            .price-sale {
-              font-weight: 600;
-              color: $color-forth;
-            }
-
-            .price-original {
-              color: $p-primary;
-              text-decoration: line-through;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .course__slider {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 1rem;
-
-    button {
-      display: block;
-    }
-
-    &-btn {
-      @include pageSliderBtn();
-      flex-grow: 0;
-      flex-shrink: 0;
-    }
-
-    &-track {
-      height: 0.5rem;
-      width: 100%;
-      background-color: transparent;
-      position: relative;
-      border-radius: 0.4rem;
-      overflow: hidden;
-
-      &:hover {
-        height: 0.7rem;
-      }
-
-      .course__slider-thumb {
-        position: absolute;
-        height: 100%;
-        width: 33%;
-        background-color: $color-forth;
-        border-radius: inherit;
-        cursor: grab;
-
-        &:active {
-          cursor: grabbing;
-          background-color: #dddd;
-          height: 0.8rem;
-          top: -0.2rem;
-        }
-
-        &::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: -1rem;
-          bottom: -1rem;
-        }
-      }
-    }
   }
 }

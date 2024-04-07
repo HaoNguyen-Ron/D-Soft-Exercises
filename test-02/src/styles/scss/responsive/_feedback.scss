@@ -3,25 +3,10 @@
     .feedback__slider {
       flex-direction: column;
       gap: 2rem;
-
-      &-btn {
-        display: none;
-      }
-
-      .responsive {
-        display: flex;
-        gap: 2rem;
-      }
     }
 
     .feedback__cards {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      .card {
-        width: 75%;
-      }
+      padding: 2rem 5rem;
     }
   }
 }

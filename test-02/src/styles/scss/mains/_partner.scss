@@ -16,16 +16,10 @@
         background-color: $color-secondary;
       }
     }
-
-    .responsive {
-      display: none;
-    }
   }
 
   .partner__list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
+    display: flex;
 
     .partner {
       object-fit: contain;
