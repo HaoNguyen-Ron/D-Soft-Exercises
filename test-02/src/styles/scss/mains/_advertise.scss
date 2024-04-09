@@ -14,13 +14,13 @@
         }
       }
     }
-    
+
     &:nth-child(2) {
       position: absolute;
       right: 6rem;
       top: 50%;
       transform: translateY(-50%);
-  
+
       .dot-wrapper {
         .dot {
           background-color: $dot-color-grey;
@@ -28,7 +28,6 @@
       }
     }
   }
-
 
   .advertise-content {
     display: flex;

@@ -1,11 +1,11 @@
 @media screen and (max-width: 991px) {
-  .hero__wrapper {
+  .hero-wrapper {
     .wrapper {
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
-      .hero__content {
+      .hero-content {
         padding: 0 1rem;
         display: flex;
         flex-direction: column;
@@ -13,7 +13,7 @@
         align-items: center;
         text-align: center;
 
-        &-desc {
+        .hero-content-desc {
           text-align: center;
         }
       }

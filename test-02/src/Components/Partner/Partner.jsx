@@ -40,7 +40,7 @@ export default function Partner() {
                 slidesPerView: 1
               },
 
-              425: {
+              426: {
                 slidesPerView: 3
               },
               991: {
