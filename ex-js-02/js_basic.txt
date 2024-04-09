@@ -1,0 +1,17 @@
+1. Khời tạo 1 array có 2000 phần tử có các key như sau (id, name, address, gender, phoneNumber, description, source) sao cho
+name & source không trùng nhau
+- Viết 1 function (searchItemBynameOrSource) để tìm kiếm 1 item dựa trên source hoặc name trong array trên (có thể làm nhiều cách)
+- Tạo 1 form input để show lên màn hình.
+- Cho bối cảnh như sau: giả sử người dùng sẽ dùng hàm này nhiều lần hoặc rất nhiều lần cùng 1 thời điểm, làm thế nào để tối ưu
+hiệu suất của function trên, viết lại function có tên "improveSearchItemBynameOrSource" nếu có.
+
+2. Tạo 1 form input để nhập số (là số ngày đi làm tiếp theo, không tính t7, CN), hãy viết function trả về kết quả ngày đó là thứ mấy trong tuần.
+ex: nhập 3 sẽ trả về "thứ 5"
+
+3. Viết 1 hàm tính toán số lớn bằng js, với các phép tính(+,-,*,/). Yêu cầu
+- Có 2 tham số (đều lớn hơn 10 chữ số)
+- Kết quả không có sai số
+- Clean code
+- Có comment, giải thích
+- Tạo 1 form UI đơn giản để show lên màn hình.
+Có thể tham khảo https://www.calculator.net/big-number-calculator.html để tham khảo UI & kết quả tính toán
