@@ -1,4 +1,3 @@
-// Hàm tạo ngẫu nhiên một chuỗi
 function generateRandomString(length) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     let result = '';
@@ -8,12 +7,10 @@ function generateRandomString(length) {
     return result;
 }
 
-// Hàm tạo ngẫu nhiên một số điện thoại
 function generateRandomPhoneNumber() {
     return Math.floor(Math.random() * 9000000000) + 1000000000;
 }
 
-// Hàm tạo một mẫu dữ liệu
 function generateData(sourceSet) {
     const FIRST_NAME = ['James', 'John', 'Robert', 'Michael', 'William', 'David', 'Richard', 'Joseph', 'Thomas', 'Charles', 'Daniel', 'Matthew', 'Anthony', 'Donald', 'Mark', 'Paul', 'Steven', 'Andrew', 'Kenneth', 'Joshua', 'Kevin', 'Brian', 'George', 'Edward', 'Ronald', 'Timothy', 'Jason', 'Jeffrey', 'Ryan', 'Jacob', 'Gary', 'Nicholas', 'Eric', 'Jonathan', 'Stephen', 'Larry', 'Justin', 'Scott', 'Brandon', 'Benjamin', 'Samuel', 'Frank', 'Gregory', 'Raymond', 'Alexander', 'Patrick', 'Jack', 'Dennis', 'Jerry', 'Tyler'];
 
@@ -26,9 +23,11 @@ function generateData(sourceSet) {
         source = generateRandomString(6);
     } while (sourceSet.has(source));
 
+    const id = generateRandomString(10);
+
     return {
-        id: generateRandomString(10),
-        name: fullName,
+        id: id,
+        name: `${fullName}_${id}`,
         address: generateRandomString(12),
         gender: Math.random() < 0.5 ? 'Male' : 'Female',
         phoneNumber: generateRandomPhoneNumber(),
@@ -37,10 +36,9 @@ function generateData(sourceSet) {
     };
 }
 
-// Hàm tạo mảng dữ liệu với 2000 phần tử
 function generateArray() {
     const dataArray = [];
-    const sourceSet = new Set(); // Sử dụng Set để theo dõi các source đã sử dụng
+    const sourceSet = new Set(); 
     while (dataArray.length < 2000) {
         const data = generateData(sourceSet);
         dataArray.push(data);
@@ -49,7 +47,6 @@ function generateArray() {
     return dataArray;
 }
 
-// Tạo mảng dữ liệu
 const dataArray = generateArray();
 
 function searchItemBynameOrSource(array, searchTerm) {
@@ -64,6 +61,7 @@ function displaySearchResults(results) {
 
     if (results.length === 0) {
         searchResultsDiv.textContent = 'No matching items found.';
+
     } else {
         const ul = document.createElement('ul');
         results.forEach(result => {
