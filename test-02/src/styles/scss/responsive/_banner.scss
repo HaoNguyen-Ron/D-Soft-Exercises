@@ -1,15 +1,13 @@
 @media screen and (max-width: 991px) {
-  .banner__wrapper {
+  .banner-wrapper {
     .wrapper {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
-      .banner__content {
+      .banner-content {
         padding: 0 7rem;
-        &-input {
-        }
       }
     }
   }

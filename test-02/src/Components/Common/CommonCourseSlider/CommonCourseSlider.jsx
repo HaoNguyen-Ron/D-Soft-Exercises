@@ -42,7 +42,7 @@ export default function CommonCourseSlider() {
           </SwiperSlide>
         )
       })}
-      <div className='common__slider__wrapper mt-5'>
+      <div className='common-slider-wrapper mt-5'>
         <CommonSliderBtn />
       </div>
     </Swiper>

@@ -1,4 +1,4 @@
-.header__wrapper {
+.header-wrapper {
   background-color: $color-primary;
   position: fixed;
   z-index: 99999;
@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
 
-    .header__logo {
+    .header-logo {
       flex-grow: 0;
       flex-shrink: 0;
       margin-right: 4rem;
@@ -20,17 +20,17 @@
       }
     }
 
-    .header__nav {
+    .header-nav {
       margin-right: 5.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
 
-      .nav__list {
+      .nav-list {
         display: flex;
+        gap: 3.2rem;
 
-        .nav__item {
-          margin-right: 3.2rem;
+        .nav-item {
           font-size: 1.2rem;
 
           i {
@@ -44,13 +44,13 @@
       }
     }
 
-    .header__action {
+    .header-action {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 2rem;
 
-      .header__action-register {
+      .header-action-register {
         button {
           border-radius: 0.3rem;
           @include pageBtn(1.2rem, 2rem);
@@ -60,6 +60,6 @@
   }
 }
 
-.header__responsive {
+.header-responsive {
   display: none;
 }

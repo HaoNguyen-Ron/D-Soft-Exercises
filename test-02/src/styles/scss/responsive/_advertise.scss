@@ -1,7 +1,7 @@
 @media screen and (max-width: 991px) {
-  .advertise__wrapper {
-    .advertise__deco {
-      &-avatar {
+  .advertise-wrapper {
+    .advertise-deco {
+      .advertise-deco-avatar {
         &:nth-child(1) {
           display: none;
         }
@@ -19,7 +19,7 @@
         }
       }
 
-      .advertise__deco-ring:first-of-type {
+      .advertise-deco-ring:first-of-type {
         top: 90%;
         left: 23rem;
       }

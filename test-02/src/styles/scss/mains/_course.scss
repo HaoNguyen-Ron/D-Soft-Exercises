@@ -1,22 +1,22 @@
-.course__wrapper {
+.course-wrapper {
   background-color: $color-secondary;
   padding-bottom: 5rem;
 
-  .course__selection {
+  .course-selection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 5rem;
     margin-bottom: 4rem;
 
-    &-title {
+    .course-selection-title {
       font-weight: 600;
     }
 
-    &-filter {
+    .course-selection-filter {
       display: flex;
 
-      &-dropdown {
+      .course-selection-filter-dropdown {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -28,10 +28,12 @@
 
             .dropdown-item {
               font-size: 1.7rem;
+
               &:hover {
                 background-color: transparent;
               }
             }
+
             &:last-child {
               margin-bottom: 0;
             }
@@ -52,7 +54,7 @@
     }
   }
 
-  .course__carousel {
+  .course-carousel {
     padding: 0 2rem;
   }
 }

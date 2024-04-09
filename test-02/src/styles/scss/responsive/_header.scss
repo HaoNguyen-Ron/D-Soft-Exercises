@@ -1,14 +1,14 @@
 @media screen and (max-width: 991px) {
-  .header__wrapper {
+  .header-wrapper {
     display: none;
   }
 
-  .header__responsive {
+  .header-responsive {
     background-color: $color-primary;
     display: block;
 
     .wrapper {
-      .header__logo {
+      .header-logo {
         margin-bottom: 4rem;
 
         img {
@@ -20,20 +20,20 @@
         }
       }
 
-      .header__nav {
+      .header-nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
         padding: 0 2rem;
 
-        .header__toggle__nav {
+        .header-toggle-nav {
           border: 0.2rem solid #dddd;
           font-size: 3rem;
         }
 
         .offcanvas {
-          &-header {
+          .offcanvas-header {
             background-color: $color-primary;
 
             .offcanvas-title {
@@ -41,12 +41,12 @@
             }
           }
 
-          &-body {
+          .offcanvas-body {
             & * {
               font-size: 2.5rem;
             }
 
-            .nav__list {
+            .nav-list {
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -56,20 +56,20 @@
           }
         }
 
-        .header__action {
+        .header-action {
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 2rem;
 
-          &-cart {
+          .header-action-cart {
             button {
               padding: 0.5rem;
               font-size: 3rem;
             }
           }
 
-          &-register {
+          .header-action-register {
             button {
               @include pageBtn(2rem, 2rem);
               border-radius: 0.5rem;
@@ -78,7 +78,7 @@
         }
       }
 
-      .header__search {
+      .header-search {
         display: flex;
         justify-content: center;
         align-items: center;

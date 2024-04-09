@@ -1,4 +1,4 @@
-.card {
+.course-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,7 @@
   border-radius: 0.5rem;
   min-width: 24.5rem;
 
-  .card__image {
+  .card-image {
     img {
       border-radius: 0.5rem;
       width: auto;
@@ -18,7 +18,7 @@
     }
   }
 
-  .card__dashboard {
+  .card-dashboard {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -26,39 +26,40 @@
     border-bottom: 1px solid #f7f6fc;
     padding: 1.2rem 0;
 
-    &-rate {
+    .card-dashboard-rate {
       i {
         color: #f5c467;
       }
     }
 
-    &-view {
+    .card-dashboard-view {
       i {
         color: $color-forth;
       }
     }
 
-    &-lesson {
+    .card-dashboard-lesson {
       i {
         color: #75b291;
       }
     }
   }
 
-  .card__info {
+  .card-info {
     width: 100%;
-    &-title {
+
+    .card-info-title {
       font-size: 1.7rem;
       font-weight: 600;
       margin-bottom: 2rem;
     }
 
-    &-content {
+    .card-info-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      &-avatar {
+      .card-info-content-avatar {
         display: flex;
         align-items: center;
         flex: 1 0 4rem;
@@ -71,7 +72,7 @@
         }
       }
 
-      &-price {
+      .card-info-content-price {
         display: flex;
         gap: 1rem;
         font-size: 1.4rem;

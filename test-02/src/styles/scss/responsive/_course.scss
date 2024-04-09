@@ -1,20 +1,15 @@
 @media screen and (max-width: 991px) {
-  .course__wrapper {
-    .course__selection {
+  .course-wrapper {
+    .course-selection {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 2rem;
 
-      &-title {
+      .course-selection-title {
         text-align: center;
       }
     }
   }
 }
 
-// @media screen and (max-width: 827px) {
-//   .course__wrapper {
-//     course__selection
-//   }
-// }

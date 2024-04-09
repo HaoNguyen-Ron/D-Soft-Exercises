@@ -1,15 +1,15 @@
-.banner__wrapper {
+.banner-wrapper {
   padding-top: 15rem;
   padding-bottom: 5rem;
   background-color: $color-primary;
   position: relative;
 
-  .banner__deco {
-    .banner__deco__dot {
+  .banner-deco {
+    .banner-deco-dot {
       position: absolute;
       z-index: 1;
 
-      .dot__wrapper {
+      .dot-wrapper {
         .dot {
           background-color: $color-forth;
         }
@@ -32,24 +32,24 @@
     position: relative;
     z-index: 2;
 
-    .banner__content {
+    .banner-content {
       margin-top: 1rem;
 
-      &-title {
+      .banner-content-title {
         font-size: 4rem;
         font-weight: 800;
         line-height: 5.3rem;
         margin-bottom: 3.2rem;
       }
 
-      &-desc {
+      .banner-content-desc {
         font-size: 1.6rem;
         color: $p-primary;
         line-height: 2.3rem;
         margin-bottom: 3.2rem;
       }
 
-      &-input {
+      .banner-content-input {
         box-shadow: rgba(165, 149, 158, 0.2) 0px 8px 24px;
 
         input {
@@ -71,7 +71,7 @@
       }
     }
 
-    .banner__image {
+    .banner-image {
       @include pageImage();
 
       flex-shrink: 0;

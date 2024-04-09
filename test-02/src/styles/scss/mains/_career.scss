@@ -1,17 +1,17 @@
-.career__wrapper {
+.career-wrapper {
   background-color: $color-primary;
   padding: 5rem 0;
   position: relative;
 
-  .career__deco {
-    .career__deco__dot {
+  .career-deco {
+    .career-deco-dot {
       z-index: 1;
 
       &:first-child {
         position: absolute;
         bottom: 0;
         left: 0;
-        .dot__wrapper {
+        .dot-wrapper {
           .dot {
             background-color: $dot-color-pink;
           }
@@ -22,7 +22,7 @@
         position: absolute;
         top: 0;
         right: 6rem;
-        .dot__wrapper {
+        .dot-wrapper {
           .dot {
             background-color: $dot-color-grey;
           }
@@ -31,7 +31,7 @@
     }
   }
 
-  .career__list {
+  .career-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
@@ -50,18 +50,18 @@
         @include pageAvatar(6rem, 6rem);
       }
 
-      .career__content {
-        &-title {
+      .career-content {
+        .career-content-title {
           font-weight: 600;
           margin-bottom: 1.5rem;
           color: $p-primary;
         }
 
-        &-desc {
+        .career-content-desc {
           margin-bottom: 1rem;
         }
 
-        &-btn {
+        .career-content-btn {
           @include pageBtn(1.5rem, 2rem);
           border-radius: 0.5rem;
         }

@@ -1,11 +1,11 @@
 @media screen and (max-width: 991px) {
-  .feedback__wrapper {
-    .feedback__slider {
+  .feedback-wrapper {
+    .feedback-slider {
       flex-direction: column;
       gap: 2rem;
     }
 
-    .feedback__cards {
+    .feedback-cards {
       padding: 2rem 5rem;
     }
   }

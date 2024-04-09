@@ -1,16 +1,16 @@
 @media screen and (max-width: 991px) {
-  .category__wrapper {
-    .category__selection {
+  .category-wrapper {
+    .category-selection {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 2rem;
 
-      &-title {
+      .category-selection-title {
         text-align: center;
       }
     }
-    .category__list {
+    .category-list {
       grid-template-columns: repeat(2, 1fr);
       padding: 2rem;
     }
@@ -18,8 +18,8 @@
 }
 
 @media screen and (max-width: 839px) {
-  .category__wrapper {
-    .category__list {
+  .category-wrapper {
+    .category-list {
       grid-template-columns: repeat(1, 1fr);
       padding: 0 2rem;
     }

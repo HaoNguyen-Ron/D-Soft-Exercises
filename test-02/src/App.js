@@ -1,4 +1,3 @@
-
 import Advertise from 'Components/Advertise'
 import Banner from 'Components/Banner/Banner'
 import Career from 'Components/Career'

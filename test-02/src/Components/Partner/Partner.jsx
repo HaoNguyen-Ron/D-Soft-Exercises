@@ -14,12 +14,12 @@ export default function Partner() {
   }, [])
 
   return (
-    <div className='partner__wrapper'>
+    <div className='partner-wrapper'>
       <div className='wrapper'>
-        <div className='partner__slider'>
-          <h1 className='partner__slider-title'>Trusted by our awesome partners</h1>
+        <div className='partner-slider'>
+          <h1 className='partner-slider-title'>Trusted by our awesome partners</h1>
 
-          <div className='partner__slider-btn'>
+          <div className='partner-slider-btn'>
             <button id='prev-btn' onClick={() => handleClickSlide('prev')}>
               <i className='ti ti-arrow-left'></i>
             </button>
@@ -30,7 +30,7 @@ export default function Partner() {
           </div>
         </div>
 
-        <div className='partner__list'>
+        <div className='partner-list'>
           <Swiper
             modules={[Scrollbar, A11y, Navigation]}
             navigation={false}

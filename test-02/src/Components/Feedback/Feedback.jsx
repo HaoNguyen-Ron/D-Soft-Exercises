@@ -16,22 +16,22 @@ export default function Feedback() {
   }, [])
 
   return (
-    <div className='feedback__wrapper'>
+    <div className='feedback-wrapper'>
       <div className='wrapper'>
-        <div className='feedback__slider'>
-          <h1 className='feedback__slider-title'>What our students have to say</h1>
+        <div className='feedback-slider'>
+          <h1 className='feedback-slider-title'>What our students have to say</h1>
 
-          <div className='feedback__slider-btn'>
-            <button className='feedback__slider-btn-prev' onClick={() => handleClickSlide('prev')}>
+          <div className='feedback-slider-btn'>
+            <button className='feedback-slider-btn-prev' onClick={() => handleClickSlide('prev')}>
               <i className='ti ti-arrow-left'></i>
             </button>
-            <button className='feedback__slider-btn-next' onClick={() => handleClickSlide('next')}>
+            <button className='feedback-slider-btn-next' onClick={() => handleClickSlide('next')}>
               <i className='ti ti-arrow-right'></i>
             </button>
           </div>
         </div>
 
-        <div className='feedback__cards'>
+        <div className='feedback-cards'>
           <Swiper
             modules={[Scrollbar, A11y, Navigation]}
             spaceBetween={20}

@@ -8,20 +8,20 @@ export default function CommonFeedbackCard({ feedback }) {
   }
 
   return (
-    <div className='card' key={feedback.id}>
-      <div className='card__title'>
-        <div className='card__title-student'>
-          <img className='card__title-student-avatar' src={feedback.avatar} alt='Student img' />
-          <div className='card__title-student-name'>
+    <div className='feedback-card' key={feedback.id}>
+      <div className='card-title'>
+        <div className='card-title-student'>
+          <img className='card-title-student-avatar' src={feedback.avatar} alt='Student img' />
+          <div className='card-title-student-name'>
             {feedback.major}
             <p>{feedback.role}</p>
           </div>
         </div>
 
-        <div className='card__title-rate'>{stars}</div>
+        <div className='card-title-rate'>{stars}</div>
       </div>
 
-      <p className='card__title-desc'>{feedback.comment}</p>
+      <p className='card-title-desc'>{feedback.comment}</p>
     </div>
   )
 }

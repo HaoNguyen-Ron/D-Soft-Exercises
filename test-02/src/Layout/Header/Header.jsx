@@ -6,17 +6,17 @@ export default function Header() {
   return (
     <header>
       <>
-        <div className='header__wrapper'>
+        <div className='header-wrapper'>
           <div className='wrapper'>
-            <a href='/' className='header__logo'>
+            <a href='/' className='header-logo'>
               <img src={logo} alt='Skillfy main logo' className='img-fluid' />
             </a>
 
-            <nav className='header__nav'>
-              <ul className='nav__list d-flex'>
+            <nav className='header-nav'>
+              <ul className='nav-list d-flex'>
                 {HEADER_NAV.map((nav, index) => {
                   return (
-                    <li className='nav__item d-flex align-items-center' key={index}>
+                    <li className='nav-item d-flex align-items-center' key={index}>
                       {nav}
                       <i className='ti ti-angle-down ms-1'></i>
                     </li>
@@ -25,33 +25,33 @@ export default function Header() {
               </ul>
             </nav>
 
-            <div className='header__action'>
-              <div className='header__action-search'>
+            <div className='header-action'>
+              <div className='header-action-search'>
                 <button>
                   <i className='fa-solid fa-magnifying-glass'></i>
                 </button>
               </div>
-              <div className='header__action-cart'>
+              <div className='header-action-cart'>
                 <button>
                   <i className='ti ti-shopping-cart'></i>
                 </button>
               </div>
-              <div className='header__action-register'>
+              <div className='header-action-register'>
                 <button className='btn-primary'>Register</button>
               </div>
             </div>
           </div>
         </div>
 
-        <div className='header__responsive'>
+        <div className='header-responsive'>
           <div className='wrapper'>
-            <a href='/' className='header__logo'>
+            <a href='/' className='header-logo'>
               <img src={logo} alt='Skillfy main logo' className='img-fluid' />
             </a>
 
-            <div className='header__nav'>
+            <div className='header-nav'>
               <button
-                className='btn header__toggle__nav'
+                className='btn header-toggle-nav'
                 type='button'
                 data-bs-toggle='offcanvas'
                 data-bs-target='#offcanvasWithBothOptions'
@@ -74,8 +74,8 @@ export default function Header() {
                   <button type='button' className='btn-close' data-bs-dismiss='offcanvas' aria-label='Close'></button>
                 </div>
                 <nav className='offcanvas-body'>
-                  <ul className='nav__list'>
-                    <li className='nav__item d-flex align-items-center'>
+                  <ul className='nav-list'>
+                    <li className='nav-item d-flex align-items-center'>
                       <div className='dropdown'>
                         <button
                           className='btn dropdown-toggle'
@@ -104,7 +104,7 @@ export default function Header() {
                         </ul>
                       </div>
                     </li>
-                    <li className='nav__item d-flex align-items-center'>
+                    <li className='nav-item d-flex align-items-center'>
                       <div className='dropdown'>
                         <button
                           className='btn dropdown-toggle'
@@ -133,7 +133,7 @@ export default function Header() {
                         </ul>
                       </div>
                     </li>
-                    <li className='nav__item d-flex align-items-center'>
+                    <li className='nav-item d-flex align-items-center'>
                       <div className='dropdown'>
                         <button
                           className='btn dropdown-toggle'
@@ -162,7 +162,7 @@ export default function Header() {
                         </ul>
                       </div>
                     </li>
-                    <li className='nav__item d-flex align-items-center'>
+                    <li className='nav-item d-flex align-items-center'>
                       <div className='dropdown'>
                         <button
                           className='btn dropdown-toggle'
@@ -191,7 +191,7 @@ export default function Header() {
                         </ul>
                       </div>
                     </li>
-                    <li className='nav__item d-flex align-items-center'>
+                    <li className='nav-item d-flex align-items-center'>
                       <div className='dropdown'>
                         <button
                           className='btn dropdown-toggle'
@@ -220,7 +220,7 @@ export default function Header() {
                         </ul>
                       </div>
                     </li>
-                    <li className='nav__item d-flex align-items-center'>
+                    <li className='nav-item d-flex align-items-center'>
                       <div className='dropdown'>
                         <button
                           className='btn dropdown-toggle'
@@ -253,20 +253,20 @@ export default function Header() {
                 </nav>
               </div>
 
-              <div className='header__action'>
-                <div className='header__action-cart'>
+              <div className='header-action'>
+                <div className='header-action-cart'>
                   <button>
                     <i className='ti ti-shopping-cart'></i>
                   </button>
                 </div>
-                <div className='header__action-register'>
+                <div className='header-action-register'>
                   <button className='btn-primary'>Register</button>
                 </div>
               </div>
             </div>
 
-            <div className='header__search'>
-              <div className='input-group header__search'>
+            <div className='header-search'>
+              <div className='input-group header-search'>
                 <input
                   type='text'
                   className='form-control'

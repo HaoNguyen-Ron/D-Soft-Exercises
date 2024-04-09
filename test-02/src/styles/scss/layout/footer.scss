@@ -1,4 +1,4 @@
-.footer__wrapper {
+.footer-wrapper {
   background-color: $bg-footer;
   padding-top: 5rem;
   position: relative;
@@ -7,11 +7,11 @@
     color: white;
   }
 
-  .footer__deco {
+  .footer-deco {
     .footer__deco__dot {
       position: absolute;
       z-index: 1;
-      .dot__wrapper {
+      .dot-wrapper {
         .dot {
           background-color: $dot-color-grey;
         }
@@ -28,19 +28,19 @@
     }
   }
 
-  .footer__info__list {
+  .footer-info-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 2rem;
     position: relative;
     z-index: 2;
 
-    .footer__info {
-      &-title {
+    .footer-info {
+      .footer-info-title {
         margin-bottom: 3rem;
       }
 
-      &-link {
+      .footer-info-link {
         .link {
           margin-bottom: 1.5rem;
           a {
@@ -51,7 +51,7 @@
     }
   }
 
-  .footer__bottom {
+  .footer-bottom {
     border-top: 0.1rem solid $p-secondary;
     padding: 2rem 0;
     display: flex;

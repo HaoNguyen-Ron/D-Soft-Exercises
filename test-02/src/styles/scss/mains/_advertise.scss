@@ -1,32 +1,36 @@
-.advertise__wrapper {
+.advertise-wrapper {
   background-color: $color-primary;
   position: relative;
   padding: 4rem 0;
 
-  .advertise__dot_deco-1 {
-    position: absolute;
-    bottom: 0;
+  .advertise-dot-deco {
+    &:first-child {
+      position: absolute;
+      bottom: 0;
 
-    .dot__wrapper {
-      .dot {
-        background-color: $dot-color-pink;
+      .dot-wrapper {
+        .dot {
+          background-color: $dot-color-pink;
+        }
+      }
+    }
+    
+    &:nth-child(2) {
+      position: absolute;
+      right: 6rem;
+      top: 50%;
+      transform: translateY(-50%);
+  
+      .dot-wrapper {
+        .dot {
+          background-color: $dot-color-grey;
+        }
       }
     }
   }
 
-  .advertise__dot_deco-2 {
-    position: absolute;
-    right: 6rem;
-    top: 50%;
-    transform: translateY(-50%);
-    .dot__wrapper {
-      .dot {
-        background-color: $dot-color-grey;
-      }
-    }
-  }
 
-  .advertise__content {
+  .advertise-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,14 +38,14 @@
     gap: 3rem;
     padding: 10rem;
 
-    &-btn {
+    .advertise-content-btn {
       @include pageBtn(1.2rem, 2rem);
       border-radius: 0.5rem;
     }
   }
 
-  .advertise__deco {
-    &-avatar {
+  .advertise-deco {
+    .advertise-deco-avatar {
       position: absolute;
       @include pageAvatar(5.5rem, 5.5rem);
 
@@ -78,14 +82,14 @@
       }
     }
 
-    &-ring {
+    .advertise-deco-ring {
       @include pageAvatar(3rem, 3rem);
       position: absolute;
       border: 1rem solid $btn-primary;
 
       &:first-of-type {
         top: 50%;
-        left: 23rem;
+        left: 20rem;
         transform: translate(-50%, -50%);
       }
 
