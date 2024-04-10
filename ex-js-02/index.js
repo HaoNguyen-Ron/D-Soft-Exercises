@@ -63,13 +63,17 @@ function displaySearchResults(results) {
         searchResultsDiv.textContent = 'No matching items found.';
 
     } else {
-        const ul = document.createElement('ul');
+        const table = document.createElement('table');
+        table.classList.add('table', 'table-striped');
+        
+        const headerRow = table.insertRow(0);
+        headerRow.innerHTML = '<th>Name</th><th>Address</th><th>Gender</th><th>Phone Number</th><th>Description</th><th>Source</th>';
+
         results.forEach(result => {
-            const li = document.createElement('li');
-            li.textContent = `Name: ${result.name}, Source: ${result.source}`;
-            ul.appendChild(li);
+            const row = table.insertRow(-1);
+            row.innerHTML = `<td>${result.name}</td><td>${result.address}</td><td>${result.gender}</td><td>${result.phoneNumber}</td><td>${result.description}</td><td>${result.source}</td>`;
         });
-        searchResultsDiv.appendChild(ul);
+        searchResultsDiv.appendChild(table);
     }
 }
 

@@ -1,0 +1,23 @@
+.wrapper {
+    padding: 0 20px;
+}
+.search-wrapper {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.input-group{
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group label {
+    margin-right: 10px;
+}
+
+.searchResults {
+    height: 300px;
+    overflow-y: auto;
+}
+
