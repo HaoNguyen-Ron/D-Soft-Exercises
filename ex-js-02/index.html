@@ -29,7 +29,9 @@
 
             <button type="submit" class="btn btn-danger">Search</button>
           </form>
-          <div id="searchResults" class="searchResults"></div>
+          <div id="searchResults" class="searchResults">
+            It is blank
+          </div>
         </div>
 
         <div class="date-wrapper">
@@ -51,7 +53,7 @@
             <div class="calculator d-flex row align-items-center gap-5 justify-content-center">
                 <input type="text" id="number1" placeholder="Enter a number" class="form-control col-3">
 
-                <select id="operator" class="form-control col-3 w-50">
+                <select id="operator" class="form-control col-3 w-25">
                     <option value="add">+</option>
                     <option value="subtract">-</option>
                     <option value="multiply">*</option>
@@ -71,6 +73,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
     <script src="index.js"></script>
   </body>

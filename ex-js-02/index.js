@@ -49,14 +49,32 @@ function generateArray() {
 
 const dataArray = generateArray();
 
-function searchItemBynameOrSource(array, searchTerm) {
-    searchTerm = searchTerm.toLowerCase(); 
+const searchResultsDiv = document.getElementById('searchResults');
 
-    return array.filter(item => item.name.toLowerCase().includes(searchTerm) || item.source.toLowerCase() === searchTerm);
+function throttle(mainFunction, delay) {
+    let timerFlag = null;
+  
+    return (...args) => {
+      if (timerFlag === null) {
+        mainFunction(...args);
+        timerFlag = setTimeout(() => {
+          timerFlag = null;
+        }, delay);
+      }
+    };
+  }
+
+const improveSearchItemBynameOrSource = _.debounce(function(searchInput) {
+    const searchResults = searchItemBynameOrSource(dataArray, searchInput);
+    
+    displaySearchResults(searchResults);
+}, 1000);
+
+function searchItemBynameOrSource(array, searchTerm) {
+    return array.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()) || item.source.toLowerCase() === searchTerm);
 }
 
 function displaySearchResults(results) {
-    const searchResultsDiv = document.getElementById('searchResults');
     searchResultsDiv.innerHTML = ''; 
 
     if (results.length === 0) {
@@ -77,19 +95,29 @@ function displaySearchResults(results) {
     }
 }
 
+document.getElementById('searchInput').addEventListener('input', function(event) {
+    const searchInputValue = event.target.value.trim()
+
+    if(searchInputValue === '') return displaySearchResults([])
+
+    improveSearchItemBynameOrSource(searchInputValue)
+})
+
 document.getElementById('searchForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
     const searchInput = document.getElementById('searchInput').value.trim(); 
 
     if (searchInput === '') {
-        alert('Please enter a search term.');
+        searchResultsDiv.textContent = 'Please fill in the input';
+
         return;
     }
 
     const searchResults = searchItemBynameOrSource(dataArray, searchInput);
     displaySearchResults(searchResults);
 });
+
 
 //-------------------------------Date----------------------//
 document.addEventListener("DOMContentLoaded", function() {
@@ -172,7 +200,7 @@ function calculate() {
     const number1 = document.getElementById("number1").value;
     const number2 = document.getElementById("number2").value;
     const operator = document.getElementById("operator").value;
-    
+
     let result;
 
     switch (operator) {
