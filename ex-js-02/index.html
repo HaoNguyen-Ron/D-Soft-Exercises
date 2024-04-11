@@ -16,31 +16,51 @@
   <body>
     <div class="wrapper">
         <div class="search-wrapper">
-          <h2>Search Form</h2>
+          <h2 class="text-danger">Search Form</h2>
           <form id="searchForm" class="input-group">
             <label for="searchInput">Enter name or source:</label>
+
             <input
               type="text"
               id="searchInput"
               name="searchInput"
               class="form-control"
             />
-            <button type="submit" class="btn btn-primary">Search</button>
+
+            <button type="submit" class="btn btn-danger">Search</button>
           </form>
           <div id="searchResults" class="searchResults"></div>
         </div>
+
+        <div class="date-wrapper">
+          <h2 class="text-success text-center">Date</h2>
+
+          <div class="input-group">
+            <label class="me-2" for="inputDate">Enter a number (next working day): </label>
+
+            <input class="form-control w-50" type="number" id="inputDate" min="1" placeholder="Enter a number">
+
+            <button class="btn btn-success" id="checkDateBtn">Check date</button>
+          </div>
+
+          <p id="date-result"></p>
+        </div>
     
         <div class="calculator-wrapper">
-            <div class="calculator">
-                <input type="text" id="number1" placeholder="Enter a number">
-                <select id="operator">
+          <h2 class="text-primary">Calculator</h2>
+            <div class="calculator d-flex row align-items-center gap-5 justify-content-center">
+                <input type="text" id="number1" placeholder="Enter a number" class="form-control col-3">
+
+                <select id="operator" class="form-control col-3 w-50">
                     <option value="add">+</option>
                     <option value="subtract">-</option>
                     <option value="multiply">*</option>
                     <option value="divide">/</option>
                 </select>
-                <input type="text" id="number2" placeholder="Enter another number">
-                <button onclick="calculate()">Calculate</button>
+
+                <input type="text" id="number2" placeholder="Enter another number" class="form-control col-3">
+
+                <button id="calculateBtn" class="btn btn-primary col-3">Calculate</button>
                 <p id="result">Result: </p>
             </div>
         </div>
