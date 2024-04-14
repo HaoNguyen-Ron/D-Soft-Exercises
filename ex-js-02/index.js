@@ -49,14 +49,32 @@ function generateArray() {
 
 const dataArray = generateArray();
 
-function searchItemBynameOrSource(array, searchTerm) {
-    searchTerm = searchTerm.toLowerCase(); 
+const searchResultsDiv = document.getElementById('searchResults');
 
-    return array.filter(item => item.name.toLowerCase().includes(searchTerm) || item.source.toLowerCase() === searchTerm);
+function throttle(mainFunction, delay) {
+    let timerFlag = null;
+  
+    return (...args) => {
+      if (timerFlag === null) {
+        mainFunction(...args);
+        timerFlag = setTimeout(() => {
+          timerFlag = null;
+        }, delay);
+      }
+    };
+  }
+
+const improveSearchItemBynameOrSource = _.debounce(function(searchInput) {
+    const searchResults = searchItemBynameOrSource(dataArray, searchInput);
+    
+    displaySearchResults(searchResults);
+}, 1000);
+
+function searchItemBynameOrSource(array, searchTerm) {
+    return array.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()) || item.source.toLowerCase() === searchTerm);
 }
 
 function displaySearchResults(results) {
-    const searchResultsDiv = document.getElementById('searchResults');
     searchResultsDiv.innerHTML = ''; 
 
     if (results.length === 0) {
@@ -77,16 +95,131 @@ function displaySearchResults(results) {
     }
 }
 
+document.getElementById('searchInput').addEventListener('input', function(event) {
+    const searchInputValue = event.target.value.trim()
+
+    if(searchInputValue === '') return displaySearchResults([])
+
+    improveSearchItemBynameOrSource(searchInputValue)
+})
+
 document.getElementById('searchForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
     const searchInput = document.getElementById('searchInput').value.trim(); 
 
     if (searchInput === '') {
-        alert('Please enter a search term.');
+        searchResultsDiv.textContent = 'Please fill in the input';
+
         return;
     }
 
     const searchResults = searchItemBynameOrSource(dataArray, searchInput);
     displaySearchResults(searchResults);
 });
+
+
+//-------------------------------Date----------------------//
+document.addEventListener("DOMContentLoaded", function() {
+    let checkDateButton = document.getElementById("checkDateBtn");
+
+    checkDateButton.addEventListener("click", calculateDayOfWeek);
+});
+
+function calculateDayOfWeek() {
+    let inputDate = document.getElementById("inputDate").value;
+    let startDate = new Date();
+    let dayOfWeek;
+
+    for (let i = 0; i < inputDate; i++) {
+        startDate.setDate(startDate.getDate() + 1);
+
+        if (startDate.getDay() >= 6) { 
+            startDate.setDate(startDate.getDate() == 1);
+        } 
+    }
+
+    switch (startDate.getDay()) {
+        case 0:
+            dayOfWeek = "Sunday";
+            break;
+        case 1:
+            dayOfWeek = "Monday";
+            break;
+        case 2:
+            dayOfWeek = "Tuesday";
+            break;
+        case 3:
+            dayOfWeek = "Wednesday";
+            break;
+        case 4:
+            dayOfWeek = "Thursday";
+            break;
+        case 5:
+            dayOfWeek = "Friday";
+            break;
+        case 6:
+            dayOfWeek = "Saturday";
+            break;
+        default:
+            dayOfWeek = "Invalid day";
+    }
+
+    document.getElementById("date-result").innerHTML = "The next working day will be: " + dayOfWeek;
+
+    document.removeEventListener('click', calculateDayOfWeek)
+}
+
+
+//-------------------------------Calculate----------------------//
+document.addEventListener('DOMContentLoaded', function() {
+    const calculateBtn = document.getElementById('calculateBtn')
+    calculateBtn.addEventListener('click', calculate)
+
+})
+function add(a, b) {
+    return BigInt(a) + BigInt(b);
+}
+
+function subtract(a, b) {
+    return BigInt(a) - BigInt(b);
+}
+
+function multiply(a, b) {
+    return BigInt(a) * BigInt(b);
+}
+
+function divide(a, b) {
+    if (b == 0) {
+        return "Cannot divide by zero";
+    }
+    return BigInt(a) / BigInt(b);
+}
+
+function calculate() {
+    const number1 = document.getElementById("number1").value;
+    const number2 = document.getElementById("number2").value;
+    const operator = document.getElementById("operator").value;
+
+    let result;
+
+    switch (operator) {
+        case "add":
+            result = add(number1, number2);
+            break;
+        case "subtract":
+            result = subtract(number1, number2);
+            break;
+        case "multiply":
+            result = multiply(number1, number2);
+            break;
+        case "divide":
+            result = divide(number1, number2);
+            break;
+        default:
+            result = "Invalid operator";
+    }
+
+    document.getElementById("result").innerHTML = "Result: " + result;
+}
+

@@ -5,6 +5,7 @@
     width: 75%;
     text-align: center;
     margin: 0 auto;
+    padding: 20px 0;
 }
 
 .input-group{
@@ -19,5 +20,17 @@
 .searchResults {
     height: 300px;
     overflow-y: auto;
+    border: 1px solid #dddd;
+    border-radius: 20px;
 }
 
+.date-wrapper {
+    height: 100px;
+}
+
+.calculator-wrapper {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
