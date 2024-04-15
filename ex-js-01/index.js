@@ -310,6 +310,10 @@ console.log(flattenedArrWithLoop); // Output: [1, 2, 3, 4, 5, 6]
  * Hàm trả về boolean
  */
 
+//include()
+const includeArr = [1, 2, 3, 4, 5];
+console.log(includeArr.includes(3)); // true
+
 //isArray()
 console.log(Array.isArray([1, 3, 5])); // true
 console.log(Array.isArray('[]')); //false
