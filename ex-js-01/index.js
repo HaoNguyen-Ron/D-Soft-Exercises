@@ -168,6 +168,12 @@ let arrayindex2 = 5;
 console.log(`An index of ${arrayindex} returns ${declareArr.at(arrayindex)}`); //An index of 2 returns 3
 console.log(`An index of ${arrayindex2} returns ${declareArr.at(arrayindex2)}`); //An index of 5 returns undefined
 
+// indexOf()
+const indexOfArr = [1, 2, 3, 4, 5];
+console.log(arr.indexOf(3)); // 2
+
+
+
 // join()
 const elements = ['Fire', 'Air', 'Water'];
 
@@ -175,11 +181,7 @@ console.log(elements.join()); // "Fire,Air,Water"
 console.log(elements.join('')); // "FireAirWater"
 console.log(elements.join('-')); // "Fire-Air-Water"
 
-//isArray()
-console.log(Array.isArray([1, 3, 5])); // true
-console.log(Array.isArray('[]')); //false
-
-// find() findIndex() : Chỉ trả về giá trị đầu tiên đúng với điều kiện
+// find(): Chỉ trả về giá trị đầu tiên đúng với điều kiện
 const arrNumber = [1, 2, 3, 4, 5, 7, 8, 1];
 const foundElement = arrNumber.find(element => element > 2);
 console.log(foundElement); // Output: 3
@@ -189,21 +191,12 @@ const isLargeNumber = (element) => element > 5;
 console.log(arrNumber.findIndex(isLargeNumber)); // index: 7 (số 7)
 console.log(arrNumber.findLast(isLargeNumber)); //  8 
 
-// forEach(): giống map() nhưng forEach Hàm callback này có thể thực hiện các thao tác hoặc tính toán trên phần tử, nhưng không trả về giá trị nào cũng không trả về mảng mới
-
-// sort()
-const months = ['March', 'Jan', 'Feb', 'Dec'];
-months.sort();
-console.log(months); // ["Dec", "Feb", "Jan", "March"]
-
-const array1 = [1, 30, 4, 21, 100000];
-array1.sort();
-console.log(array1); //[1, 100000, 21, 30, 4]
-
+// forEach(): giống map() nhưng forEach là Hàm callback có thể thực hiện các thao tác hoặc tính toán trên phần tử, nhưng không trả về giá trị nào cũng không trả về mảng mới
 
 /**
  * Hàm tạo ra mảng mới
  */
+
 //concat() 
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6, 7, 8];
@@ -238,6 +231,17 @@ console.log(newSpreadArr); // Output: [1, 2, 3]
  * Hàm làm thay đổi array gốc
  */
 const originalArr = [1, 2, 3];
+
+
+// sort()
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months); // ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1); //[1, 100000, 21, 30, 4]
+
 
 //push()
 originalArr.push(4);
@@ -302,6 +306,23 @@ const nestedArr = [1, [2, 3], [4, [5, 6]]];
 const flattenedArrWithLoop = flattenArray(nestedArr);
 console.log(flattenedArrWithLoop); // Output: [1, 2, 3, 4, 5, 6]
 
+/**
+ * Hàm trả về boolean
+ */
+
+//isArray()
+console.log(Array.isArray([1, 3, 5])); // true
+console.log(Array.isArray('[]')); //false
+
+//some()
+const someArr = [10, 20, 30, 40, 50];
+const someresult = arr.some(element => element > 25);
+console.log(someresult); // true
+
+//every()
+const everyArr = [10, 20, 30, 40, 50];
+const everyResult = arr.every(element => element > 25);
+console.log(everyResult); //  false
 
 //-----------------------------------------------------------OBJECT------------------------------------------------------------------------------//
 //a) Khai báo object:
