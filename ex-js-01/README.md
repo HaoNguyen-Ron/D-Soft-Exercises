@@ -131,3 +131,34 @@ sort():
         - sort() không đảm bảo tính ổn định, có thể dẫn đến kết quả không nhất quán khi sắp xếp các phần tử có cùng giá trị.
 
 
+//----------------------------------------- Những hàm thay đổi mảng gốc //-----------------------------------------
+
+Những hàm tạo ra mảng mới thông thường sẽ gặp vấn đề về bộ nhớ nếu mảng tạo ra quá lón.
+
+map():
+    + Ưu điểm:
+        - Tạo ra một mảng mới bằng cách ánh xạ mỗi phần tử của mảng gốc qua một hàm callback.
+        - Linh hoạt và mạnh mẽ, cho phép biến đổi mảng một cách dễ dàng.
+    + Nhược điểm:
+        - Không thay đổi mảng gốc, nhưng tạo ra một bản sao mới, có thể tốn bộ nhớ.
+
+filter():
+    + Ưu điểm:
+        - Tạo ra một mảng mới chứa các phần tử của mảng gốc thỏa mãn một điều kiện nhất định.
+        - Dễ đọc và sử dụng, giúp lọc ra các phần tử theo yêu cầu.
+    + Nhược điểm:
+        - Không thay đổi mảng gốc, nhưng tạo ra một bản sao mới, có thể tốn bộ nhớ.
+
+slice():
+    + Ưu điểm:
+        -Tạo ra một mảng mới chứa một phần của mảng gốc bằng cách chỉ định vị trí bắt đầu và kết thúc.
+        -Dễ sử dụng và hiệu quả cho việc cắt ra một phần của mảng.
+    + Nhược điểm:
+        -Tạo ra một bản sao mới của phần của mảng, có thể tốn bộ nhớ nếu mảng lớn.
+
+concat():
+    + Ưu điểm:
+        - Tạo ra một mảng mới bằng cách kết hợp mảng gốc với một hoặc nhiều mảng khác hoặc các giá trị.
+        - Linh hoạt và đa dạng, cho phép kết hợp các mảng một cách dễ dàng.
+    + Nhược điểm:
+        - Tạo ra một mảng mới, có thể tốn bộ nhớ nếu kết hợp nhiều mảng lớn.
