@@ -1,9 +1,32 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+  todos: Object,
+  isDone: Boolean
+})
+
+const checked = ref(false)
+
+const doneTaskList = computed(() => {
+  return `${props.todos.done ? (classes.taskNameDone) : ''}`
+})
+
+const taskTitle = computed(() => {
+  return props.isDone ? 'Hoàn thành' : 'Chưa hoàn thành'
+})
+</script>
 
 <template>
-  <div :class="$style.taskListContainer">
-    <h2 :class="$style.taskListTitle">{doneTaskList ? 'Hoàn thành' : 'Chưa hoàn thành'}</h2>
-    <div :class="$style.taskList">
+  <div :class="classes.taskListContainer">
+    <h2 :class="classes.taskListTitle">
+      {{ taskTitle }}
+    </h2>
+
+    <div :class="classes.taskList">
+      <div :class="classes.task" v-for="todo in props.todos" :key="todo.id">
+        <input type="checkbox" :class="$style.taskCheckbox" v-model="checked" />
+      </div>
+
+      <span :class="`${classes.taskName} `"> {todo.name} </span>
       <!-- {todos.map((todo) => (
           <div :class={styles.task} key={todo.id}>
             <input
@@ -28,13 +51,16 @@
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" module="classes">
+.taskListContainer {
+  margin-top: 2rem;
+}
 .taskListTitle {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
 
-.taskList {
+.task {
   display: flex;
   align-items: flex-start;
   &:not(:last-child) {

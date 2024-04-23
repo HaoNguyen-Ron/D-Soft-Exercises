@@ -4,7 +4,7 @@ const isDone = ref(false)
 
 function handleAddTodo(newTodo) {
   const todo = {
-    newTodo,
+    name: newTodo,
     done: false,
     id: new Date().toISOString()
   }
@@ -15,11 +15,11 @@ function handleAddTodo(newTodo) {
 }
 
 const doneTodos = computed(() => {
-   return todos.value.filter((todo) => todo.done)
+  return todos.value.filter((todo) => todo.done)
 })
 
 const notDoneTodos = computed(() => {
-   return todos.value.filter((todo) => !todo.done)
+  return todos.value.filter((todo) => !todo.done)
 })
 </script>
 
@@ -28,11 +28,17 @@ const notDoneTodos = computed(() => {
     <div :class="$style.todoListContainer">
       <TaskInput @update-add-todo="handleAddTodo" />
 
-      <TaskList :todos="notDoneTodos" :isDone="isDone"/>
+      <TaskList :todos="notDoneTodos" :isDone="isDone" />
 
-      <TaskList  :todos="doneTodos" :isDone="!isDone"/>
+      <TaskList :todos="doneTodos" :isDone="!isDone" />
     </div>
   </div>
+
+  {{ todos }}
+  <br />
+  {{ notDoneTodos }}
+  <br />
+  {{ doneTodos }}
 </template>
 
 <style lang="scss" module>
