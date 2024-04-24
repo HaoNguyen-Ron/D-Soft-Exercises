@@ -32,12 +32,11 @@ function handleChangeInput(event) {
   }
 }
 
-const displayInputValue = computed(() => {
-  return props.currentEditingTodo ? props.currentEditingTodo.name : currentValue.value
-})
-
-const checkisEditingTodo = computed(() => {
-  return props.currentEditingTodo ? '✔' : '➕'
+const checkIsEditingTodo = computed(() => {
+  return {
+    button: props.currentEditingTodo ? '✔' : '➕',
+    inputValue: props.currentEditingTodo ? props.currentEditingTodo.name : currentValue.value
+  }
 })
 </script>
 
@@ -50,11 +49,12 @@ const checkisEditingTodo = computed(() => {
         :class="$style.taskInput"
         type="text"
         placeholder="Please fill your task"
-        :value="displayInputValue"
+        :value="checkIsEditingTodo.inputValue"
         @change="handleChangeInput"
       />
+      
       <button :class="$style.taskInputBtn" type="submit">
-        {{ checkisEditingTodo }}
+        {{ checkIsEditingTodo.button }}
       </button>
     </form>
   </div>

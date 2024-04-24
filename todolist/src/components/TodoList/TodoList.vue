@@ -74,7 +74,8 @@ const notDoneTodos = computed(() => {
         :currentEditingTodo="currentEditingTodo"
         :updateTodo="updateTodo"
         :finishEditTodo="finishEditTodo"
-      />
+      >
+      </TaskInput>
 
       <TaskList
         :todos="notDoneTodos"

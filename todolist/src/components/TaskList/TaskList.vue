@@ -9,23 +9,23 @@ const props = defineProps({
   handleDeleteTodo: Function
 })
 
-const checkDoneTaskList = computed(() => {
+const checkTaskCompletion = computed(() => {
   const $style = useCssModule('$style')
 
   const anyDone = props.todos.some((todo) => todo.done)
 
-  return `${anyDone ? $style.taskListNameDone : ''}`
-})
-
-const checkTaskTitle = computed(() => {
-  return props.isDone ? 'Completed' : 'Incomplete'
+  return {
+    title: props.isDone ? 'Completed' : 'Incomplete',
+    background: props.isDone ? $style.completed : $style.incomplete,
+    textDecoration: anyDone ? $style.taskListNameDone : ''
+  }
 })
 </script>
 
 <template>
   <div :class="$style.taskListContainer">
-    <h2 :class="$style.taskListTitle">
-      {{ checkTaskTitle }}
+    <h2 :class="[$style.taskListTitle, checkTaskCompletion.background]">
+      {{ checkTaskCompletion.title }}
     </h2>
 
     <div :class="$style.taskList">
@@ -37,7 +37,7 @@ const checkTaskTitle = computed(() => {
           @change="(e) => setDoneTodo(todo.id, e.target.checked)"
         />
 
-        <span :class="[checkDoneTaskList, $style.taskListName]"> {{ todo.name }} </span>
+        <span :class="[checkTaskCompletion.textDecoration, $style.taskListName]"> {{ todo.name }} </span>
 
         <div :class="$style.taskListActions">
           <button :class="$style.taskListBtn" @click="startEditTodo(todo.id)">
@@ -65,6 +65,14 @@ const checkTaskTitle = computed(() => {
 .taskListTitle {
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+
+.completed {
+  color: var(--color-primary);
+}
+
+.incomplete {
+  color: var(--color-danger);
 }
 
 .task {
