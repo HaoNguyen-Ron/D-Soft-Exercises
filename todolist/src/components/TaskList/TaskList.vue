@@ -3,24 +3,21 @@ import { useCssModule, computed } from 'vue'
 
 const emit = defineEmits(['handleDeleteTodo', 'startEditTodo', 'setDoneTodo'])
 
-const props = defineProps({
+const { todos, isDone } = defineProps({
   todos: Object,
-  isDone: Boolean,
-  setDoneTodo: Function,
-  startEditTodo: Function,
-  handleDeleteTodo: Function
+  isDone: Boolean
 })
 
 const checkTaskCompletion = computed(() => {
   const $style = useCssModule('$style')
 
-  const anyDone = props.todos.some((todo) => todo.done)
+  const anyDone = todos.some((todo) => todo.done)
 
   return {
-    title: props.isDone ? 'Completed' : 'Incomplete',
-    background: props.isDone ? $style.completed : $style.incomplete,
+    title: isDone ? 'Completed' : 'Incomplete',
+    background: isDone ? $style.taskCompleted : $style.taskIncomplete,
     textDecoration: anyDone ? $style.taskListNameDone : '',
-    backgroundColor: props.isDone ? 'var(--color-primary-light)' : 'var(--color-danger-light)'
+    borderColor: isDone ? $style.taskListBorderCompleted : $style.taskListBorderIncomplete
   }
 })
 </script>
@@ -32,7 +29,7 @@ const checkTaskCompletion = computed(() => {
     </h2>
 
     <div :class="$style.taskList">
-      <div :class="$style.task" v-for="todo in props.todos" :key="todo.id">
+      <div :class="$style.task" v-for="todo in todos" :key="todo.id">
         <input
           type="checkbox"
           :class="$style.taskListCheckbox"
@@ -40,15 +37,23 @@ const checkTaskCompletion = computed(() => {
           @change="(e) => emit('setDoneTodo', todo.id, e.target.checked)"
         />
 
-        <span :class="[checkTaskCompletion.textDecoration, $style.taskListName]"> {{ todo.name }} </span>
+        <span :class="[checkTaskCompletion.textDecoration, $style.taskListName]" :title="todo.name">
+          {{ todo.name }}
+        </span>
 
         <div :class="$style.taskListActions">
-          <button :class="$style.taskListBtn" @click="emit('startEditTodo', todo.id)">
-            <i class="fa-regular fa-pen-to-square"></i>
+          <button
+            :class="[$style.taskListBtn, checkTaskCompletion.borderColor]"
+            @click="emit('startEditTodo', todo.id)"
+          >
+            <i class="fa-regular fa-pen-to-square" :class="$style.taskListIcon"></i>
           </button>
 
-          <button :class="$style.taskListBtn" @click="emit('handleDeleteTodo', todo.id)">
-            <i class="fa-regular fa-trash-can"></i>
+          <button
+            :class="[$style.taskListBtn, checkTaskCompletion.borderColor]"
+            @click="emit('handleDeleteTodo', todo.id)"
+          >
+            <i class="fa-regular fa-trash-can" :class="$style.taskListIcon"></i>
           </button>
         </div>
       </div>
@@ -63,37 +68,77 @@ const checkTaskCompletion = computed(() => {
 
 .taskList {
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
-.taskListTitle {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.completed {
-  color: var(--color-primary);
-}
-
-.incomplete {
+.taskIncomplete {
   color: var(--color-danger);
 }
 
 .task {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .taskListCheckbox {
-  flex: 0 0 10%;
-  max-width: 10%;
+  -webkit-appearance: none;
+  flex: 0 0 3rem;
   height: 2rem;
   margin-top: 0.5rem;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.taskListCheckbox::after {
+  content: '...';
+  font-size: 2.5rem;
+  position: absolute;
+  top: -0.6rem;
+  left: 3px;
+  color: var(--color-danger);
+}
+
+.taskListCheckbox:active,
+.taskListCheckbox:checked:active {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.taskListCheckbox:checked {
+  background-color: #e9ecee;
+  border: 1px solid #adb8c0;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
+    inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #99a1a7;
+}
+
+.taskListCheckbox:checked:after {
+  content: '\2714';
+  font-size: 3rem;
+  position: absolute;
+  top: -1.5rem;
+  left: 3px;
+  color: var(--color-primary);
 }
 
 .taskListName {
-  flex: 0 0 70%;
-  max-width: 70%;
+  flex: 1 1 auto;
   color: #383f50;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &.taskListNameDone {
     color: #b2b7bb;
@@ -102,21 +147,43 @@ const checkTaskCompletion = computed(() => {
 }
 
 .taskListActions {
-  flex: 0 0 20%;
-  max-width: 20%;
+  flex: 0 0 auto;
   gap: 0.4rem;
   display: flex;
   justify-content: space-between;
 }
 
 .taskListBtn {
-  flex: 0 0 3.5rem;
+  flex: 0 0 7rem;
   max-width: 3.5rem;
   font-size: 1.8rem;
   border-radius: 8px;
+  height: 3.5rem;
 
   &:hover {
     background-color: var(--color-hover-primary);
+    color: #ffffff;
   }
+}
+
+.taskListIcon {
+  color: #fefefefe;
+}
+
+.taskListBorderCompleted {
+  background-color: var(--color-primary-light);
+}
+
+.taskListBorderIncomplete {
+  background-color: var(--color-danger-light);
+}
+
+.taskListTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.taskCompleted {
+  color: var(--color-primary);
 }
 </style>
