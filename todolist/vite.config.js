@@ -12,7 +12,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     AutoImport({
-      imports: ['vue']
+      imports: [{ vue: ['ref', 'computed'] }]
     }),
     Components()
   ],

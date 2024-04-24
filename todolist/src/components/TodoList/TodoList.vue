@@ -1,6 +1,9 @@
 <script setup>
+import { ref, computed } from 'vue'
+
 const todos = ref([])
 const isDone = ref(false)
+const currentEditingTodo = ref(null)
 
 function handleAddTodo(newTodo) {
   const todo = {
@@ -14,31 +17,84 @@ function handleAddTodo(newTodo) {
   todos.value.push(todo)
 }
 
+function setDoneTodo(id, done) {
+  todos.value = todos.value.map((todo) => {
+    if (todo.id === id) {
+      return { ...todo, done }
+    }
+    return todo
+  })
+}
+
+const startEditTodo = (id) => {
+  const findTodo = todos.value.find((todo) => todo.id === id)
+  if (findTodo) {
+    currentEditingTodo.value = findTodo
+  }
+}
+
+const updateTodo = (name) => {
+  if (!currentEditingTodo.value) return null
+  currentEditingTodo.value = name
+}
+
+const finishEditTodo = () => {
+  const updateSelectedTodo = (todos) => {
+    console.log('««««« todos »»»»»', todos);
+    return todos.map((todo) => {
+      if (todo.id === currentEditingTodo.value.id) {
+        return currentEditingTodo
+      }
+      return todo
+    })
+  }
+  console.log('««««« updateSelectedTodo »»»»»', updateSelectedTodo);
+  currentEditingTodo.value = null
+}
+
+const handleDeleteTodo = (id) => {
+  if (currentEditingTodo.value) {
+    return (currentEditingTodo.value = null)
+  }
+  todos.value = todos.value.filter((todo) => todo.id !== id)
+}
+
 const doneTodos = computed(() => {
-  return todos.value.filter((todo) => todo.done)
+  return todos.value.filter((todo) => todo.done) || []
 })
 
 const notDoneTodos = computed(() => {
-  return todos.value.filter((todo) => !todo.done)
+  return todos.value.filter((todo) => !todo.done) || []
 })
 </script>
 
 <template>
   <div :class="$style.todoList">
     <div :class="$style.todoListContainer">
-      <TaskInput @update-add-todo="handleAddTodo" />
+      <TaskInput
+        :handleAddTodo="handleAddTodo"
+        :currentEditingTodo="currentEditingTodo"
+        :updateTodo="updateTodo"
+        :finishEditTodo="finishEditTodo"
+      />
 
-      <TaskList :todos="notDoneTodos" :isDone="isDone" />
+      <TaskList
+        :todos="notDoneTodos"
+        :isDone="isDone"
+        :setDoneTodo="setDoneTodo"
+        :startEditTodo="startEditTodo"
+        :handleDeleteTodo="handleDeleteTodo"
+      />
 
-      <TaskList :todos="doneTodos" :isDone="!isDone" />
+      <TaskList
+        :todos="doneTodos"
+        :isDone="!isDone"
+        :setDoneTodo="setDoneTodo"
+        :startEditTodo="startEditTodo"
+        :handleDeleteTodo="handleDeleteTodo"
+      />
     </div>
   </div>
-
-  {{ todos }}
-  <br />
-  {{ notDoneTodos }}
-  <br />
-  {{ doneTodos }}
 </template>
 
 <style lang="scss" module>

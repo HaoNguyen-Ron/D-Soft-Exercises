@@ -1,12 +1,44 @@
 <script setup>
-const emit = defineEmits('updateAddTodo')
+import { computed, ref } from 'vue'
+
+const props = defineProps({
+  handleAddTodo: Function,
+  updateTodo: Function,
+  finishEditTodo: Function,
+  currentEditingTodo: Object
+})
 
 const currentValue = ref('')
 
-function handleSubmit() {
-  emit('updateAddTodo', currentValue.value)
-  currentValue.value = ''
+function handleSubmit(event) {
+  event.preventDefault()
+
+  if (props.currentEditingTodo) {
+    props.finishEditTodo()
+    if (currentValue.value) return (currentValue.value = '')
+  } else {
+    props.handleAddTodo(currentValue.value)
+    currentValue.value = ''
+  }
 }
+
+function handleChangeInput(event) {
+  const { value } = event.target
+
+  if (props.currentEditingTodo) {
+    props.updateTodo(value)
+  } else {
+    currentValue.value = value
+  }
+}
+
+const displayInputValue = computed(() => {
+  return props.currentEditingTodo ? props.currentEditingTodo.name : currentValue.value
+})
+
+const checkisEditingTodo = computed(() => {
+  return props.currentEditingTodo ? '✔' : '➕'
+})
 </script>
 
 <template>
@@ -14,9 +46,16 @@ function handleSubmit() {
     <h1 :class="$style.taskInputTitle">Todolist</h1>
 
     <form :class="$style.taskInputForm" @submit.prevent="handleSubmit">
-      <input :class="$style.taskInput" type="text" placeholder="Please fill your task" v-model="currentValue" />
-      <!-- <button type="submit">{currentTodo ? '✔' : '➕'}</button> -->
-      <button :class="$style.taskInputBtn" type="submit">➕</button>
+      <input
+        :class="$style.taskInput"
+        type="text"
+        placeholder="Please fill your task"
+        :value="displayInputValue"
+        @change="handleChangeInput"
+      />
+      <button :class="$style.taskInputBtn" type="submit">
+        {{ checkisEditingTodo }}
+      </button>
     </form>
   </div>
 </template>
