@@ -33,23 +33,21 @@ const startEditTodo = (id) => {
   }
 }
 
-const updateTodo = (name) => {
+const updateTodo = (value) => {
   if (!currentEditingTodo.value) return null
-  currentEditingTodo.value = name
+  currentEditingTodo.value.name = value
 }
 
 const finishEditTodo = () => {
-  const updateSelectedTodo = (todos) => {
-    console.log('««««« todos »»»»»', todos);
-    return todos.map((todo) => {
+  if (currentEditingTodo.value) {
+    todos.value = todos.value.map((todo) => {
       if (todo.id === currentEditingTodo.value.id) {
-        return currentEditingTodo
+        return { ...todo, name: currentEditingTodo.value.name }
       }
       return todo
     })
+    currentEditingTodo.value = null
   }
-  console.log('««««« updateSelectedTodo »»»»»', updateSelectedTodo);
-  currentEditingTodo.value = null
 }
 
 const handleDeleteTodo = (id) => {

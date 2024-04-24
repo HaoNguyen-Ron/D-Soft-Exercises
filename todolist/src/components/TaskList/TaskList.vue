@@ -18,7 +18,7 @@ const checkDoneTaskList = computed(() => {
 })
 
 const checkTaskTitle = computed(() => {
-  return props.isDone ? 'Hoàn thành' : 'Chưa hoàn thành'
+  return props.isDone ? 'Completed' : 'Incomplete'
 })
 </script>
 
@@ -40,9 +40,13 @@ const checkTaskTitle = computed(() => {
         <span :class="[checkDoneTaskList, $style.taskListName]"> {{ todo.name }} </span>
 
         <div :class="$style.taskListActions">
-          <button :class="$style.taskListBtn" @click="startEditTodo(todo.id)">✒</button>
+          <button :class="$style.taskListBtn" @click="startEditTodo(todo.id)">
+            <i class="fa-regular fa-pen-to-square"></i>
+          </button>
 
-          <button :class="$style.taskListBtn" @click="handleDeleteTodo(todo.id)">🗑</button>
+          <button :class="$style.taskListBtn" @click="handleDeleteTodo(todo.id)">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -59,7 +63,7 @@ const checkTaskTitle = computed(() => {
 }
 
 .taskListTitle {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
