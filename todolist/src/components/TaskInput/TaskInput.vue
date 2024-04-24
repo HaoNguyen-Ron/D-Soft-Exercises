@@ -1,6 +1,8 @@
 <script setup>
 import { computed, ref } from 'vue'
 
+const emit = defineEmits(['handleAddTodo', 'updateTodo', 'finishEditTodo'])
+
 const props = defineProps({
   handleAddTodo: Function,
   updateTodo: Function,
@@ -14,10 +16,10 @@ function handleSubmit(event) {
   event.preventDefault()
 
   if (props.currentEditingTodo) {
-    props.finishEditTodo()
+    emit('finishEditTodo')
     if (currentValue.value) return (currentValue.value = '')
   } else {
-    props.handleAddTodo(currentValue.value)
+    emit('handleAddTodo', currentValue.value)
     currentValue.value = ''
   }
 }
@@ -26,7 +28,7 @@ function handleChangeInput(event) {
   const { value } = event.target
 
   if (props.currentEditingTodo) {
-    props.updateTodo(value)
+    emit('updateTodo', value)
   } else {
     currentValue.value = value
   }
@@ -52,7 +54,7 @@ const checkIsEditingTodo = computed(() => {
         :value="checkIsEditingTodo.inputValue"
         @change="handleChangeInput"
       />
-      
+
       <button :class="$style.taskInputBtn" type="submit">
         {{ checkIsEditingTodo.button }}
       </button>

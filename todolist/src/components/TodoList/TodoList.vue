@@ -70,27 +70,26 @@ const notDoneTodos = computed(() => {
   <div :class="$style.todoList">
     <div :class="$style.todoListContainer">
       <TaskInput
-        :handleAddTodo="handleAddTodo"
+        @handleAddTodo="handleAddTodo"
         :currentEditingTodo="currentEditingTodo"
-        :updateTodo="updateTodo"
-        :finishEditTodo="finishEditTodo"
-      >
-      </TaskInput>
+        @updateTodo="updateTodo"
+        @finishEditTodo="finishEditTodo"
+      />
 
       <TaskList
         :todos="notDoneTodos"
-        :isDone="isDone"
-        :setDoneTodo="setDoneTodo"
-        :startEditTodo="startEditTodo"
-        :handleDeleteTodo="handleDeleteTodo"
+        :isDone="(isDone = false)"
+        @setDoneTodo="setDoneTodo"
+        @startEditTodo="startEditTodo"
+        @handleDeleteTodo="handleDeleteTodo"
       />
 
       <TaskList
         :todos="doneTodos"
-        :isDone="!isDone"
-        :setDoneTodo="setDoneTodo"
-        :startEditTodo="startEditTodo"
-        :handleDeleteTodo="handleDeleteTodo"
+        :isDone="(isDone = true)"
+        @setDoneTodo="setDoneTodo"
+        @startEditTodo="startEditTodo"
+        @handleDeleteTodo="handleDeleteTodo"
       />
     </div>
   </div>

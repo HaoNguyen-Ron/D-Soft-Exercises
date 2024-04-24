@@ -1,6 +1,8 @@
 <script setup>
 import { useCssModule, computed } from 'vue'
 
+const emit = defineEmits(['handleDeleteTodo', 'startEditTodo', 'setDoneTodo'])
+
 const props = defineProps({
   todos: Object,
   isDone: Boolean,
@@ -17,7 +19,8 @@ const checkTaskCompletion = computed(() => {
   return {
     title: props.isDone ? 'Completed' : 'Incomplete',
     background: props.isDone ? $style.completed : $style.incomplete,
-    textDecoration: anyDone ? $style.taskListNameDone : ''
+    textDecoration: anyDone ? $style.taskListNameDone : '',
+    backgroundColor: props.isDone ? 'var(--color-primary-light)' : 'var(--color-danger-light)'
   }
 })
 </script>
@@ -34,17 +37,17 @@ const checkTaskCompletion = computed(() => {
           type="checkbox"
           :class="$style.taskListCheckbox"
           :checked="todo.done"
-          @change="(e) => setDoneTodo(todo.id, e.target.checked)"
+          @change="(e) => emit('setDoneTodo', todo.id, e.target.checked)"
         />
 
         <span :class="[checkTaskCompletion.textDecoration, $style.taskListName]"> {{ todo.name }} </span>
 
         <div :class="$style.taskListActions">
-          <button :class="$style.taskListBtn" @click="startEditTodo(todo.id)">
+          <button :class="$style.taskListBtn" @click="emit('startEditTodo', todo.id)">
             <i class="fa-regular fa-pen-to-square"></i>
           </button>
 
-          <button :class="$style.taskListBtn" @click="handleDeleteTodo(todo.id)">
+          <button :class="$style.taskListBtn" @click="emit('handleDeleteTodo', todo.id)">
             <i class="fa-regular fa-trash-can"></i>
           </button>
         </div>
@@ -78,10 +81,6 @@ const checkTaskCompletion = computed(() => {
 .task {
   display: flex;
   align-items: center;
-
-  &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
 }
 
 .taskListCheckbox {
