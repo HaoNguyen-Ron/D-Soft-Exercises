@@ -91,7 +91,7 @@ const checkIsEditingTodo = computed(() => {
 
   &:focus {
     outline: 1px solid var(--color-primary);
-    background-color: var(--color-hover-primary)
+    background-color: var(--color-background-primary);
   }
 }
 

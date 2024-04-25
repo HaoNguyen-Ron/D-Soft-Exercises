@@ -63,7 +63,7 @@ const doneTodos = computed(() => {
 
 const notDoneTodos = computed(() => {
   return todos.value.filter((todo) => !todo.done) || []
-})
+}) 
 </script>
 
 <template>

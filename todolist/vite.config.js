@@ -12,7 +12,16 @@ export default defineConfig({
     vue(),
     vueJsx(),
     AutoImport({
-      imports: [{ vue: ['ref', 'computed'] }]
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
+        /\.md$/ // .md
+      ],
+      imports: ['vue', 'vuex'],
+      eslintrc: {
+        enabled: true
+      }
     }),
     Components()
   ],
