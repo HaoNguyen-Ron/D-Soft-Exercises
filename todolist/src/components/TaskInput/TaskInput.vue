@@ -36,8 +36,11 @@ function handleChangeInput(event) {
 
 const checkIsEditingTodo = computed(() => {
   return {
-    button: props.currentEditingTodo ? '✔' : '➕',
-    inputValue: props.currentEditingTodo ? props.currentEditingTodo.name : currentValue.value
+    button: props.currentEditingTodo
+      ? '<i class="fa-regular fa-pen-to-square" style="color: var(color-danger);"></i>'
+      : '<i class="fa-solid fa-circle-plus" <i class="fa-regular fa-pen-to-square" style="color: var(color-primary);"></i>',
+    inputValue: props.currentEditingTodo ? props.currentEditingTodo.name : currentValue.value,
+    borderColor: props.currentEditingTodo ? 'var(--color-danger)' : 'var(--color-primary)'
   }
 })
 </script>
@@ -56,7 +59,11 @@ const checkIsEditingTodo = computed(() => {
       />
 
       <button :class="$style.taskInputBtn" type="submit">
-        {{ checkIsEditingTodo.button }}
+        <span
+          v-html="checkIsEditingTodo.button"
+          :class="$style.taskInputICon"
+          :style="{ color: checkIsEditingTodo.borderColor }"
+        ></span>
       </button>
     </form>
   </div>
@@ -66,6 +73,7 @@ const checkIsEditingTodo = computed(() => {
 .taskInputTitle {
   font-size: 3rem;
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .taskInputForm {
@@ -80,6 +88,11 @@ const checkIsEditingTodo = computed(() => {
   border-radius: 0.7rem;
   padding: 0 1rem;
   border-width: 1px;
+
+  &:focus {
+    outline: 1px solid var(--color-primary);
+    background-color: var(--color-hover-primary)
+  }
 }
 
 .taskInputBtn {
@@ -96,5 +109,9 @@ const checkIsEditingTodo = computed(() => {
   &:hover {
     background-color: var(--color-hover-primary);
   }
+}
+
+.taskInputICon {
+  font-size: 3rem;
 }
 </style>
