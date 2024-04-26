@@ -54,8 +54,6 @@ const handleDeleteTodo = (id) => {
       />
     </div>
   </div>
-
-  <p>Todos: {{ todoStore.todos }}</p>
 </template>
 
 <style lang="scss" module>
