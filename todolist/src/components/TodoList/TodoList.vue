@@ -24,7 +24,6 @@ const finishEditTodo = () => {
 const handleDeleteTodo = (id) => {
   todoStore.handleDeleteTodo(id)
 }
-
 </script>
 
 <template>

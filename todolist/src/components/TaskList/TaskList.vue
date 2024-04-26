@@ -11,7 +11,6 @@ const { todos, isDone } = defineProps({
 const checkTaskCompletion = computed(() => {
   const $style = useCssModule('$style')
 
-
   return {
     title: isDone ? 'Completed' : 'Incomplete',
     background: isDone ? $style.taskCompleted : $style.taskIncomplete,

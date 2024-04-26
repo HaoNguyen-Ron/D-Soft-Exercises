@@ -35,10 +35,11 @@ function handleChangeInput(event) {
 }
 
 const checkIsEditingTodo = computed(() => {
+  const buttonIcon = props.currentEditingTodo
+    ? '<i class="fa-regular fa-pen-to-square" style="color: var(color-danger);"></i>'
+    : '<i class="fa-solid fa-circle-plus" style="color: var(color-primary);"></i>'
   return {
-    button: props.currentEditingTodo
-      ? '<i class="fa-regular fa-pen-to-square" style="color: var(color-danger);"></i>'
-      : '<i class="fa-solid fa-circle-plus" <i class="fa-regular fa-pen-to-square" style="color: var(color-primary);"></i>',
+    buttonIcon,
     inputValue: props.currentEditingTodo ? props.currentEditingTodo.name : currentValue.value,
     borderColor: props.currentEditingTodo ? 'var(--color-danger)' : 'var(--color-primary)'
   }
@@ -60,7 +61,7 @@ const checkIsEditingTodo = computed(() => {
 
       <button :class="$style.taskInputBtn" type="submit">
         <span
-          v-html="checkIsEditingTodo.button"
+          v-html="checkIsEditingTodo.buttonIcon"
           :class="$style.taskInputICon"
           :style="{ color: checkIsEditingTodo.borderColor }"
         ></span>
