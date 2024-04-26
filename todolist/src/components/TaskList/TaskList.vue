@@ -1,5 +1,5 @@
 <script setup>
-import { useCssModule, computed } from 'vue'
+import { useCssModule, computed, ref } from 'vue'
 
 const emit = defineEmits(['handleDeleteTodo', 'startEditTodo', 'setDoneTodo'])
 
@@ -7,6 +7,8 @@ const { todos, isDone } = defineProps({
   todos: Object,
   isDone: Boolean
 })
+
+const modalOpen = ref(false)
 
 const checkTaskCompletion = computed(() => {
   const $style = useCssModule('$style')
@@ -47,13 +49,12 @@ const checkTaskCompletion = computed(() => {
             <i class="fa-regular fa-pen-to-square" :class="$style.taskListIcon"></i>
           </button>
 
-          <button
-            :class="[$style.taskListBtn, checkTaskCompletion.borderColor]"
-            @click="emit('handleDeleteTodo', todo.id)"
-          >
+          <button :class="[$style.taskListBtn, checkTaskCompletion.borderColor]" @click="modalOpen = !modalOpen">
             <i class="fa-regular fa-trash-can" :class="$style.taskListIcon"></i>
           </button>
         </div>
+
+        <commonModal :modalOpen="modalOpen" @closeModal="modalOpen = false" />
       </div>
     </div>
   </div>
