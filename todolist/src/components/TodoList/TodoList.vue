@@ -1,69 +1,30 @@
 <script setup>
-import { ref, computed } from 'vue'
+import useTodoStore from '@/stores/store.js'
 
-const todos = ref([])
-const isDone = ref(false)
-const currentEditingTodo = ref(null)
+const todoStore = useTodoStore()
 
-function handleAddTodo(newTodo) {
-  const todo = {
-    name: newTodo,
-    done: false,
-    id: new Date().toISOString()
-  }
+const handleAddTodo = (newTodoName) => todoStore.addTodo(newTodoName)
 
-  if (newTodo.trim() === '') return
-
-  todos.value.push(todo)
-}
-
-function setDoneTodo(id, done) {
-  todos.value = todos.value.map((todo) => {
-    if (todo.id === id) {
-      return { ...todo, done }
-    }
-    return todo
-  })
+const setDoneTodo = (id, done) => {
+  todoStore.toggleDoneTodo(id, done)
 }
 
 const startEditTodo = (id) => {
-  const findTodo = todos.value.find((todo) => todo.id === id)
-  if (findTodo) {
-    currentEditingTodo.value = findTodo
-  }
+  todoStore.startEditTodo(id)
 }
 
-const updateTodo = (value) => {
-  if (!currentEditingTodo.value) return null
-  currentEditingTodo.value.name = value
+const updateTodo = (newTodoName) => {
+  todoStore.updateTodo(newTodoName)
 }
 
 const finishEditTodo = () => {
-  if (currentEditingTodo.value) {
-    todos.value = todos.value.map((todo) => {
-      if (todo.id === currentEditingTodo.value.id) {
-        return { ...todo, name: currentEditingTodo.value.name }
-      }
-      return todo
-    })
-    currentEditingTodo.value = null
-  }
+  todoStore.finishEditTodo()
 }
 
 const handleDeleteTodo = (id) => {
-  if (currentEditingTodo.value) {
-    return (currentEditingTodo.value = null)
-  }
-  todos.value = todos.value.filter((todo) => todo.id !== id)
+  todoStore.handleDeleteTodo(id)
 }
 
-const doneTodos = computed(() => {
-  return todos.value.filter((todo) => todo.done) || []
-})
-
-const notDoneTodos = computed(() => {
-  return todos.value.filter((todo) => !todo.done) || []
-}) 
 </script>
 
 <template>
@@ -71,28 +32,30 @@ const notDoneTodos = computed(() => {
     <div :class="$style.todoListContainer">
       <TaskInput
         @handleAddTodo="handleAddTodo"
-        :currentEditingTodo="currentEditingTodo"
+        :currentEditingTodo="todoStore.currentEditingTodo"
         @updateTodo="updateTodo"
         @finishEditTodo="finishEditTodo"
       />
 
       <TaskList
-        :todos="notDoneTodos"
-        :isDone="(isDone = false)"
+        :todos="todoStore.notDoneTodos"
+        :isDone="(todoStore.isDone = false)"
         @setDoneTodo="setDoneTodo"
         @startEditTodo="startEditTodo"
         @handleDeleteTodo="handleDeleteTodo"
       />
 
       <TaskList
-        :todos="doneTodos"
-        :isDone="(isDone = true)"
+        :todos="todoStore.doneTodos"
+        :isDone="(todoStore.isDone = true)"
         @setDoneTodo="setDoneTodo"
         @startEditTodo="startEditTodo"
         @handleDeleteTodo="handleDeleteTodo"
       />
     </div>
   </div>
+
+  <p>Todos: {{ todoStore.todos }}</p>
 </template>
 
 <style lang="scss" module>

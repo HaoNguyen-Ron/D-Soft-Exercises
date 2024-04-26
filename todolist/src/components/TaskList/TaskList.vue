@@ -11,12 +11,11 @@ const { todos, isDone } = defineProps({
 const checkTaskCompletion = computed(() => {
   const $style = useCssModule('$style')
 
-  const anyDone = todos.some((todo) => todo.done)
 
   return {
     title: isDone ? 'Completed' : 'Incomplete',
     background: isDone ? $style.taskCompleted : $style.taskIncomplete,
-    textDecoration: anyDone ? $style.taskListNameDone : '',
+    textDecoration: isDone ? $style.taskListNameDone : '',
     borderColor: isDone ? $style.taskListBorderCompleted : $style.taskListBorderIncomplete
   }
 })
